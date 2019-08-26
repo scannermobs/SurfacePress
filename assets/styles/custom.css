@@ -1,0 +1,232 @@
+
+/* Use Foundation's visibility classes, 
+rather than adding your own [ .hide, .show-for-sr, etc] */
+body{
+	color: #333;
+	font-family: 'Open Sans', sans-serif;
+}
+a{
+	color: inherit;
+}
+main a, a:focus, a:hover{
+	color: rgb(53, 121, 168);
+}
+main a:hover{
+	text-decoration: underline;
+}
+button, .button{
+	background-color: rgb(53, 121, 168);
+	color: rgb(255, 255, 255);
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+    font-family: inherit;
+}
+.grid-container{
+    max-width: 75rem; /* <-- The main site width, adjust as needed */
+}
+#content{
+	padding-top: 1em;
+}
+.clear{
+    clear: both;
+}
+[data-toggle]{
+	cursor: pointer;
+}
+
+/* Font sizing system based on multiplying the base value of body */
+h1{ font-size: 200%;
+}
+h2{
+	font-size: 180%;
+}
+h3{
+	font-size: 160%;
+}
+h4{
+	font-size: 140%;
+}
+h5{
+	font-size: 120%;
+}
+h6{
+	font-size: 100%;
+}
+
+/* Base settings for content area, edit as needed */
+#content p, 
+#content h1, 
+#content h2, 
+#content h3, 
+#content h4, 
+#content h5, 
+#content h6, 
+#content li, 
+#content figure, 
+#content pre{
+	margin-bottom: 1em;
+}
+#content p:not(:first-child), 
+#content h1:not(:first-child), 
+#content h2:not(:first-child), 
+#content h3:not(:first-child), 
+#content h4:not(:first-child), 
+#content h5:not(:first-child), 
+#content h6:not(:first-child), 
+#content figure:not(:first-child), 
+#content pre:not(:first-child){
+	margin-top: 1em;
+}
+#content ul, #content ol, #content dl{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+#content ul, #content ol, #content dl{
+	list-style-position: inside;
+}
+
+/* Layout settings, edit and expand as needed */
+.copyright{
+    margin: 1rem 0;
+}
+.utility-nav ul{
+	display: flex;
+	justify-content: flex-start;
+	list-style-type: none;
+	margin-top: 1rem;
+	margin-bottom: 0;
+}
+#utility-nav ul{
+	justify-content: flex-end;
+}
+#mobile-utility-nav ul{
+	font-size: 0.8em;
+	margin: 1.6em;
+}
+#utility-nav li{
+	margin: 0 0 0 1.5rem;
+}
+#mobile-utility-nav li{
+	margin: 0 1.5rem 0 0;
+}
+#comments{
+	margin-top: 8em;
+}
+.utility-nav a{
+	display: inline-block;
+	line-height: 1;
+	padding: 0.5em 0.8em;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+#main-branding,
+#mobile-branding{
+	list-style-type: none;
+	margin: 0;
+}
+#mobile-branding a{
+	color: #000;
+	display: block;
+}
+#main-branding{
+    background-color: transparent;
+}
+#main-branding a{
+	font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 2rem 0;
+}
+#top-bar-menu{
+	padding-bottom: 1rem;
+}
+.top-bar{
+    background-color: transparent;
+}
+.title-bar{
+	justify-content: space-between;
+	padding: 1rem 1.22rem;
+	background-color: inherit;
+	color: #333;
+	font-weight: 700;
+}
+.title-bar .menu-icon::after{
+	background-color: #000;
+}
+.table-scroll{
+	font-size: 80%;
+}
+.table-scroll table{
+	table-layout: fixed;
+}
+.table-scroll table td{
+	word-wrap: break-word;
+}
+#mainnav{
+	margin: 0;
+}
+#mainnav li{
+	display: block;
+	list-style: none;
+}
+#mainnav li a{
+	font-weight: 600;
+}
+
+/*
+██████╗ ██╗  ██╗ ██████╗ ███╗   ██╗███████╗     ██████╗ ███╗   ██╗██╗     ██╗   ██╗
+██╔══██╗██║  ██║██╔═══██╗████╗  ██║██╔════╝    ██╔═══██╗████╗  ██║██║     ╚██╗ ██╔╝
+██████╔╝███████║██║   ██║██╔██╗ ██║█████╗      ██║   ██║██╔██╗ ██║██║      ╚████╔╝ 
+██╔═══╝ ██╔══██║██║   ██║██║╚██╗██║██╔══╝      ██║   ██║██║╚██╗██║██║       ╚██╔╝  
+██║     ██║  ██║╚██████╔╝██║ ╚████║███████╗    ╚██████╔╝██║ ╚████║███████╗   ██║   
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝
+*/
+@media all and (max-width: 700px){
+	body{
+		font-size: 0.7rem;
+	}
+	#main-nav a{
+		padding: 0.7rem 1.2rem;
+	}
+	#header{
+		background-color: rgb(238, 238, 238);
+	}
+}
+
+/*
+████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗    ██╗   ██╗██████╗ 
+╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝    ██║   ██║██╔══██╗
+   ██║   ███████║██████╔╝██║     █████╗     ██║       ██║   ██║██████╔╝
+   ██║   ██╔══██║██╔══██╗██║     ██╔══╝     ██║       ██║   ██║██╔═══╝ 
+   ██║   ██║  ██║██████╔╝███████╗███████╗   ██║       ╚██████╔╝██║     
+   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝        ╚═════╝ ╚═╝     
+*/
+@media all and (min-width: 700px){
+	body{
+		font-size: 0.85rem;
+	}
+}
+
+/*
+██████╗ ███████╗███████╗██╗  ██╗████████╗ ██████╗ ██████╗ 
+██╔══██╗██╔════╝██╔════╝██║ ██╔╝╚══██╔══╝██╔═══██╗██╔══██╗
+██║  ██║█████╗  ███████╗█████╔╝    ██║   ██║   ██║██████╔╝
+██║  ██║██╔══╝  ╚════██║██╔═██╗    ██║   ██║   ██║██╔═══╝ 
+██████╔╝███████╗███████║██║  ██╗   ██║   ╚██████╔╝██║     
+╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝
+*/
+@media all and (min-width: 800px){
+	body{
+		font-size: 1rem;
+	}
+}
+
+/*
+██████╗  █████╗ ███████╗███████╗    ██╗███╗   ███╗ █████╗  ██████╗ ███████╗███████╗
+██╔══██╗██╔══██╗██╔════╝██╔════╝    ██║████╗ ████║██╔══██╗██╔════╝ ██╔════╝██╔════╝
+██████╔╝███████║███████╗█████╗      ██║██╔████╔██║███████║██║  ███╗█████╗  ███████╗
+██╔══██╗██╔══██║╚════██║██╔══╝      ██║██║╚██╔╝██║██╔══██║██║   ██║██╔══╝  ╚════██║
+██████╔╝██║  ██║███████║███████╗    ██║██║ ╚═╝ ██║██║  ██║╚██████╔╝███████╗███████║
+╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝    ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
+*/                                                        
+
