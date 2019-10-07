@@ -29,4 +29,4 @@ This project is licensed under the MIT License -- see the [LICENSE.md](LICENSE.m
 
 ## Acknowledgements
 
-The author would like to thank Jeremy Englert / NeatlyPressed for the great starter theme that is JointsWP, upon which Pagoda is based
+The author would like to thank Jeremy Englert / NeatlyPressed for the great starter theme that is JointsWP, upon which SurfacePress is based
