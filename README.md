@@ -8,12 +8,17 @@ Currently using Foundation 6.5.3.
 
 The setup is the same as installing any standard WordPress theme.
 
+Please edit `assets>scripts>scripts.js`, `assets>styles>custom.css` and `functions>enqueue-scripts.php` as required.
+
+The default nav template is `parts>nav-default.php`, the other navs in this folder are unedited from the JointsWP original files.
+
 ## Comes Pre-installed With
 
-* [Foundation](https://foundation.zurb.com/) -- The web framework used
-* [Google Fonts](https://fonts.google.com/) -- Optimal settings for custom fonts, comes with Open Sans
-* [Font Awesome](https://fontawesome.com/) -- Used for easy icon fonts
+* [Foundation](https://foundation.zurb.com/) -- The web framework
+* [Google Fonts](https://fonts.google.com/) -- Optimal settings for custom fonts
+* [Font Awesome](https://fontawesome.com/) -- For easy icon fonts
 * [Cookie Consent](https://cookieconsent.osano.com/) -- Cookie law popup
+* [Real Favicon Generator](https://realfavicongenerator.net/) -- Favicon generation, simply replace the files in theme root to modify
 
 ## Contributing
 
@@ -29,4 +34,4 @@ This project is licensed under the MIT License -- see the [LICENSE.md](LICENSE.m
 
 ## Acknowledgements
 
-The author would like to thank Jeremy Englert / NeatlyPressed for the great starter theme that is JointsWP, upon which SurfacePress is based
+The author would like to thank Jeremy Englert / NeatlyPressed for the great starter theme that is JointsWP, upon which Pagoda is based
