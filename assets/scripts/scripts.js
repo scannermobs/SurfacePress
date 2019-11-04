@@ -20,8 +20,17 @@ $(function(){
 });
 
 //////////////////////////////////////////////////////////
+//      		Adds clear buttons to search fields
+
+$(function(){
+	$('input[type=search]').wrap('<span class="deleteicon" />').after($('<span/>').click(function() {
+    $('input[type=search]').val('');
+	}));
+});
+
+//////////////////////////////////////////////////////////
 //      		Template to copy and edit
 
 $(function(){
-	
+
 });
