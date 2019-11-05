@@ -7,37 +7,44 @@
 
 get_header(); ?>
 
-<div id="content" class="content grid-container" data-tpl="archive">
+<div id="content" class="content" data-tpl="archive">
 
-	<div class="inner-content grid-x grid-margin-x grid-padding-x">
+	<?php //get_sidebar(); ?>
 
-		<?php get_sidebar(); ?>
+	<main class="main" role="main">
 
-	    <main class="main small-12 medium-8 large-8 cell" role="main">
+		<header class="grid-container">
 
-	    	<header>
-	    		<h1 class="page-title"><?php the_archive_title();?></h1>
-				<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
-	    	</header>
+			<div class="grid-x grid-margin-x grid-padding-x">
 
-	    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<div class="small-12 medium-12 large-12 cell">
 
-				<!-- To see additional archive styles, visit the /parts directory -->
-				<?php get_template_part( 'parts/loop', 'archive' ); ?>
+					<h1 class="page-title"><?php the_archive_title();?></h1>
 
-			<?php endwhile; ?>
+					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 
-				<?php joints_page_navi(); ?>
+				</div>
 
-			<?php else : ?>
+			</div>
 
-				<?php get_template_part( 'parts/content', 'missing' ); ?>
+		</header>
 
-			<?php endif; ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		</main> <!-- end #main -->
+			<!-- To see additional archive styles, visit the /parts directory -->
+			<?php get_template_part( 'parts/loop', 'archive' ); ?>
 
-    </div> <!-- end #inner-content -->
+		<?php endwhile; ?>
+
+			<?php joints_page_navi(); ?>
+
+		<?php else : ?>
+
+			<?php get_template_part( 'parts/content', 'missing' ); ?>
+
+		<?php endif; ?>
+
+	</main> <!-- end #main -->
 
 </div> <!-- end #content -->
 

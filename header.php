@@ -36,7 +36,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php wp_head(); ?>
-		
+
 		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
 		<script>
@@ -74,8 +74,7 @@
 
 				<header id="header" class="header" role="banner">
 
-					 <!-- This navs will be applied to the topbar, above all content
-						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'header' ); ?>
+					 <!-- This nav will be applied to the topbar, above all content. To see additional nav styles, visit the /parts directory -->
+					 <?php get_template_part( 'parts/nav', 'default' ); ?>
 
 				</header> <!-- end .header -->

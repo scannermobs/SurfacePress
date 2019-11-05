@@ -45,3 +45,19 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 
 // Customize the WordPress admin
 // require_once(get_template_directory().'/functions/admin.php');
+
+add_action('wp_head', 'fouc_protect_against');
+/**
+ * Combat FOUC in WordPress
+ * @link https://stackoverflow.com/questions/3221561/eliminate-flash-of-unstyled-content
+ */
+function fouc_protect_against () {
+?>
+	<script>
+		jQuery('html').addClass('show-for-sr')
+		jQuery(document).ready(function($){
+			$('html').removeClass('show-for-sr')
+		})
+	</script>
+<?php
+}
