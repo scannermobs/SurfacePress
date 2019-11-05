@@ -1,8 +1,8 @@
 
-/* Use Foundation's visibility classes,
-rather than adding your own [ .hide, .show-for-sr, etc] */
+/* Use Foundation's visibility classes
+[ .show-for-sr, .hide etc], rather than making your own */
 body{
-	color: #333;
+	color: #222;
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.75rem;
 }
@@ -24,8 +24,12 @@ main a:hover{
 	text-decoration: underline;
 }
 button, .button{
+	background-color: #444;
+	color: #fff;
+}
+.button:focus, .button:hover {
 	background-color: #1a7bb5;
-	color: rgb(255, 255, 255);
+	color: #fff;
 }
 h1, h2, h3, h4, h5, h6{
 	font-weight: bold;
@@ -180,7 +184,7 @@ pre > code {
 	font-weight: 700;
 }
 .title-bar .menu-icon::after{
-	background-color: #000;
+	background-color: #222;
 }
 .table-scroll{
 	font-size: 80%;
@@ -229,7 +233,7 @@ To generate titles, please use: http://patorjk.com/software/taag/#p=display&f=AN
 */
 @media all and (max-width: 700px){
 	#main-nav a{
-		padding: 0.7rem 1.2rem;
+		padding: 0.7em 1.2em;
 	}
 	#header{
 		background-color: #eee;

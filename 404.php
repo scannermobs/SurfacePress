@@ -7,31 +7,57 @@
 
 get_header(); ?>
 
-<div id="content" class="content grid-container" data-tpl="404">
+<div id="content" class="content" data-tpl="404">
 
-	<div class="inner-content grid-x grid-margin-x grid-padding-x">
+	<main class="main" role="main">
 
-		<main class="main small-12 medium-8 large-8 cell" role="main">
+		<article class="content-not-found">
 
-			<article class="content-not-found">
+			<header class="article-header grid-container">
 
-				<header class="article-header">
-					<h1><?php _e( 'Epic 404 - Article Not Found', 'jointswp' ); ?></h1>
-				</header> <!-- end article header -->
+				<div class="grid-x grid-margin-x grid-padding-x">
 
-				<section class="entry-content">
-					<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'jointswp' ); ?></p>
-				</section> <!-- end article section -->
+					<div class="small-12 medium-12 large-12 cell">
 
-				<section class="search">
-				    <p><?php get_search_form(); ?></p>
-				</section> <!-- end search section -->
+						<h1><?php _e( 'Sorry - Page Not Found', 'jointswp' ); ?></h1>
 
-			</article> <!-- end article -->
+					</div>
 
-		</main> <!-- end #main -->
+				</div>
 
-	</div> <!-- end #inner-content -->
+			</header> <!-- end article header -->
+
+			<section class="entry-content grid-container">
+
+				<div class="grid-x grid-margin-x grid-padding-x">
+
+					<div class="small-12 medium-12 large-12 cell">
+
+						<p><?php _e( 'The page was not found, but maybe try looking again!', 'jointswp' ); ?></p>
+
+					</div>
+
+				</div>
+
+			</section> <!-- end article section -->
+
+			<section class="search grid-container">
+
+				<div class="grid-x grid-margin-x grid-padding-x">
+
+					<div class="small-12 medium-12 large-12 cell">
+
+						<p><?php get_search_form(); ?></p>
+
+					</div>
+
+				</div>
+
+			</section> <!-- end search section -->
+
+		</article> <!-- end article -->
+
+	</main> <!-- end #main -->
 
 </div> <!-- end #content -->
 
