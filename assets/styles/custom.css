@@ -92,11 +92,10 @@ h6{
 	margin-top: 1em;
 }
 #content ul, #content ol, #content dl{
-	margin-top: 2em;
-	margin-bottom: 2em;
+	margin: 2em 0 2em 2em;
 }
 #content ul, #content ol, #content dl{
-	list-style-position: inside;
+	list-style-position: outside;
 }
 blockquote, blockquote p{
 	color: #757575;
