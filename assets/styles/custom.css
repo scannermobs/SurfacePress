@@ -1,6 +1,6 @@
 
-/* PLEASE USE Foundation's visibility classes
-[ .show-for-sr, .hide (not .hidden) etc], rather than making your own */
+/* Use Foundation's visibility classes
+[ .show-for-sr, .hide etc], rather than making your own */
 body{
 	color: #222;
 	font-family: 'Roboto', sans-serif;
@@ -49,8 +49,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Font sizing system based on multiplying the base value of body */
-h1{
-	font-size: 200%;
+h1{ font-size: 200%;
 }
 h2{
 	font-size: 180%;
@@ -124,12 +123,23 @@ pre > code {
 	margin: 1rem 0;
 }
 .utility-nav ul{
+	display: flex;
+	justify-content: flex-start;
+	list-style-type: none;
 	margin-top: 1rem;
 	margin-bottom: 0;
+}
+#utility-nav ul{
+	justify-content: flex-end;
+}
+#mobile-utility-nav ul{
 	font-size: 0.8em;
-	margin: 1.6em 0;
+	margin: 1.6em;
 }
 #utility-nav li{
+	margin: 0 0 0 1.5rem;
+}
+#mobile-utility-nav li{
 	margin: 0 1.5rem 0 0;
 }
 #comments{
@@ -211,7 +221,7 @@ span.deleteicon span {
 }
 
 /*
-To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow
+To generate titles, please use: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow
 
 ██████╗ ██╗  ██╗ ██████╗ ███╗   ██╗███████╗     ██████╗ ███╗   ██╗██╗  ██╗   ██╗
 ██╔══██╗██║  ██║██╔═══██╗████╗  ██║██╔════╝    ██╔═══██╗████╗  ██║██║  ╚██╗ ██╔╝
@@ -240,12 +250,6 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 @media all and (min-width: 700px){
 	body{
 		font-size: 0.85rem;
-	}
-	.utility-nav ul{
-		justify-content: end
-	}
-	#utility-nav li{
-		margin: 0 0 0 1.5rem;
 	}
 }
 

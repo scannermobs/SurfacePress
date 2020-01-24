@@ -2,6 +2,26 @@
 // Adjust the breakpoint of the title-bar by adjusting this variable
 $breakpoint = "medium"; ?>
 
+<div id="utility-nav" class="utility-nav show-for-<?php echo $breakpoint ?>" data-tpl="nav-header">
+
+	<div class="grid-container">
+
+		<div class="grid-x grid-margin-x grid-padding-x">
+
+			<ul class="cell" role="menubar">
+
+				<li role="menuitem"><a href="">Accessibility</a></li>
+
+				<li role="menuitem"><a href="">Log in</a></li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+</div>
+
 <div class="title-bar" data-responsive-toggle="top-bar-menu" data-hide-for="<?php echo $breakpoint ?>" data-tpl="nav-header">
 
 	<ul id="mobile-branding">
@@ -46,9 +66,9 @@ $breakpoint = "medium"; ?>
 
 		</div>
 
-		<div id="utility-nav" class="utility-nav cell auto">
+		<div id="mobile-utility-nav" class="utility-nav hide-for-<?php echo $breakpoint ?>">
 
-			<ul class="cell menu" role="menubar">
+			<ul class="cell" role="menubar">
 
 				<li role="menuitem"><a href="">Accessibility</a></li>
 
@@ -65,5 +85,5 @@ $breakpoint = "medium"; ?>
 		</div>
 
 	</div>
-
+	
 </div>
