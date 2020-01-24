@@ -21,17 +21,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta class="foundation-mq">
 
+		<!-- Open Graph - edit as needed -->
+		<meta property="og:url" content="<?php echo get_the_permalink(); ?>" />
+		<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
+		<?php if(!is_front_page() && $post->post_content): ?><meta property="og:description" content="<?php echo wp_trim_words( $post->post_content, 40, '...' ); ?>" />
+			<?php else: ?><meta property="og:description" content="<?php echo get_bloginfo('description'); ?>"/><?php endif; ?>
+		<?php if(is_front_page()): ?><meta property="og:title" content="<?php echo get_bloginfo('name'); ?>"/>
+			<?php else: ?><meta property="og:title" content="<?php echo get_the_title(); ?>"/><?php endif; ?>
+		<?php if(has_post_thumbnail()): ?><meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
+			<?php else: ?><meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/favicon.ico" /><?php endif; ?>
+
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
-            <!-- To customise manually, use realfavicongenerator.net or similar -->
-            <link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/favicon-16x16.png">
-            <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/site.webmanifest">
-            <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/safari-pinned-tab.svg" color="#5bbad5">
-            <meta name="msapplication-TileColor" content="#da532c">
-            <meta name="theme-color" content="#ffffff">
-	    <?php } ?>
+			<!-- To customise manually, use realfavicongenerator.net or similar -->
+			<link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png">
+			<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/favicon-16x16.png">
+			<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/site.webmanifest">
+			<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/safari-pinned-tab.svg" color="#5bbad5">
+			<meta name="msapplication-TileColor" content="#da532c">
+			<meta name="theme-color" content="#ffffff">
+		<?php } ?>
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
