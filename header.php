@@ -22,14 +22,27 @@
 		<meta class="foundation-mq">
 
 		<!-- Open Graph - edit as needed -->
+		<?php if(is_front_page()): ?>
+			<meta property="og:title" content="<?php echo get_bloginfo('name'); ?>" />
+		<?php else: ?>
+			<meta property="og:title" content="<?php echo get_the_title(); ?>" />
+		<?php endif; ?>
+		<meta property="og:type" content="website" />
+		<?php if(has_post_thumbnail()): ?>
+			<meta property="og:image" content="<?php echo get_the_post_thumbnail_url($post->ID, 'medium'); ?>" />
+		<?php endif; ?>
 		<meta property="og:url" content="<?php echo get_the_permalink(); ?>" />
+		<?php if(!is_front_page() && $post->post_content): ?>
+			<meta property="og:description" content="<?php echo wp_trim_words( $post->post_content, 40, '...' ); ?>" />
+		<?php else: ?>
+			<meta property="og:description" content="<?php echo get_bloginfo('description'); ?>" />
+		<?php endif; ?>
 		<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
-		<?php if(!is_front_page() && $post->post_content): ?><meta property="og:description" content="<?php echo wp_trim_words( $post->post_content, 40, '...' ); ?>" />
-			<?php else: ?><meta property="og:description" content="<?php echo get_bloginfo('description'); ?>"/><?php endif; ?>
-		<?php if(is_front_page()): ?><meta property="og:title" content="<?php echo get_bloginfo('name'); ?>"/>
-			<?php else: ?><meta property="og:title" content="<?php echo get_the_title(); ?>"/><?php endif; ?>
-		<?php if(has_post_thumbnail()): ?><meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
-			<?php else: ?><meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/favicon.ico" /><?php endif; ?>
+		<meta name="twitter:card" content="summary" />
+		<!-- <meta name="twitter:site" content="@example" /> -->
+		<!-- <meta name="twitter:creator" content="@msexample" /> -->
+		<!-- <meta property="fb:admins" content="USER_ID"/> -->
+
 
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
