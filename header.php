@@ -33,7 +33,7 @@
 		<?php endif; ?>
 		<meta property="og:url" content="<?php echo get_the_permalink(); ?>" />
 		<?php if(!is_front_page() && $post->post_content): ?>
-			<meta property="og:description" content="<?php echo wp_trim_words( $post->post_content, 40, '...' ); ?>" />
+			<meta property="og:description" content="<?php echo wp_trim_words(strip_shortcodes($post->post_content), 40, '...'); ?>" />
 		<?php else: ?>
 			<meta property="og:description" content="<?php echo get_bloginfo('description'); ?>" />
 		<?php endif; ?>
