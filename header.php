@@ -19,7 +19,7 @@
 
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta class="foundation-mq">
+		<meta class="foundation-mq" name="foundation-mq" content="">
 
 		<!-- Open Graph - edit as needed -->
 		<?php if(is_front_page()): ?>
