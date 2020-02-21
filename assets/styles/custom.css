@@ -1,5 +1,5 @@
 
-/* PLEASE USE Foundation's visibility classes
+/* Please use Foundation's visibility classes
 [ .show-for-sr, .hide (not .hidden) etc], rather than making your own */
 body{
 	color: #222;
