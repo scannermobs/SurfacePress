@@ -257,7 +257,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 ██████╔╝███████╗███████║██║  ██╗   ██║   ╚██████╔╝██║
 ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝
 */
-@media all and (min-width: 800px){
+@media all and (min-width: 1024px){
 	body{
 		font-size: 1rem;
 	}
