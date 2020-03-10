@@ -126,6 +126,18 @@ pre > code {
 	font-weight: inherit;
 	color: inherit;
 }
+.entry-content .alignright, .entry-content img.alignright,
+.entry-content .alignleft, .entry-content img.alignleft{
+	display: table;
+	margin-top: 1em;
+}
+#content .align-right,
+#content .align-left{
+	max-width: 50%;
+}
+#content figure.wp-block-image > img{
+	width: 100%;
+}
 
 /* Layout settings, edit and expand as needed */
 .copyright{
@@ -216,18 +228,6 @@ span.deleteicon span {
 	height: 1.2em;
 	background-size: contain;
 	cursor: pointer;
-}
-.entry-content .alignright, .entry-content img.alignright,
-.entry-content .alignleft, .entry-content img.alignleft{
-	display: table;
-	margin-top: 1em;
-}
-#content .align-right,
-#content .align-left{
-	max-width: 50%;
-}
-#content figure.wp-block-image > img{
-	width: 100%;
 }
 
 /*
