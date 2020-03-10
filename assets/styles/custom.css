@@ -90,7 +90,15 @@ h6{
 #content h6:not(:first-child),
 #content figure:not(:first-child),
 #content pre:not(:first-child){
-	margin-top: 1em;
+	margin-top: 2em;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6{
+	clear: both;
 }
 #content ul, #content ol, #content dl{
 	margin: 2em 0 2em 2em;
@@ -209,6 +217,18 @@ span.deleteicon span {
 	background-size: contain;
 	cursor: pointer;
 }
+.entry-content .alignright, .entry-content img.alignright,
+.entry-content .alignleft, .entry-content img.alignleft{
+	display: table;
+	margin-top: 1em;
+}
+#content .align-right,
+#content .align-left{
+	max-width: 50%;
+}
+#content figure.wp-block-image > img{
+	width: 100%;
+}
 
 /*
 To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow
@@ -226,6 +246,12 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	}
 	#header{
 		background-color: #eee;
+	}
+	.entry-content .alignright, .entry-content img.alignright{
+		margin-left: 0;
+	}
+	.entry-content .alignleft, .entry-content img.alignleft{
+		margin-right: 0;
 	}
 }
 
