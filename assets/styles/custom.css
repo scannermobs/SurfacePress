@@ -240,7 +240,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 ██║     ██║  ██║╚██████╔╝██║ ╚████║███████╗    ╚██████╔╝██║ ╚████║███████╗██║
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝
 */
-@media all and (max-width: 700px){
+@media all and (max-width: 40em){
 	#main-nav a{
 		padding: 0.7em 1.2em;
 	}
@@ -263,7 +263,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
    ██║   ██║  ██║██████╔╝███████╗███████╗   ██║       ╚██████╔╝██║
    ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝        ╚═════╝ ╚═╝
 */
-@media all and (min-width: 700px){
+@media all and (min-width: 40em){
 	body{
 		font-size: 0.85rem;
 	}
@@ -283,7 +283,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 ██████╔╝███████╗███████║██║  ██╗   ██║   ╚██████╔╝██║
 ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝
 */
-@media all and (min-width: 1024px){
+@media all and (min-width: 64em){
 	body{
 		font-size: 1rem;
 	}
