@@ -12,7 +12,7 @@ Please edit `assets>scripts>scripts.js`, `assets>styles>custom.css` and `functio
 
 The default nav template is `parts>nav-default.php`, the other navs in this folder are unedited from the JointsWP original files.
 
-## Comes Pre-installed With
+## Comes Pre-installed With/Uses
 
 * [Foundation](https://foundation.zurb.com/) -- The web framework
 * [Google Fonts](https://fonts.google.com/) -- Optimal settings for custom fonts
@@ -30,8 +30,8 @@ Please read [CONTRIBUTING.md](https://raw.githubusercontent.com/scannermobs/Pago
 
 ## License
 
-This project is licensed under the MIT License -- see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License -- see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgements
 
-The author would like to thank Jeremy Englert / NeatlyPressed for the great starter theme that is JointsWP, upon which Pagoda is based
+The author would like to thank Jeremy Englert / NeatlyPressed for the great starter theme that is JointsWP, upon which the theme is based.
