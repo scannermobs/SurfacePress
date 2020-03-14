@@ -29,6 +29,28 @@ $(function(){
 })
 
 //////////////////////////////////////////////////////////
+//							Lightbox
+
+$(function(){
+	if($('.wp-block-gallery').length){
+		var modal = '<div class="reveal full" id="gallery-modal" data-reveal> \
+									<figure></figure>\
+									<button class="close-button" data-close aria-label="Close modal" type="button"> \
+										<span aria-hidden="true">&times;</span> \
+									</button> \
+								</div>'
+		var reveal = new Foundation.Reveal($(modal))
+		$('.wp-block-gallery a').click(function(event){
+			event.preventDefault()
+			var img = $(this).find('img').clone()
+			$('#gallery-modal figure img').remove()
+			$('#gallery-modal figure').prepend(img)
+			$('#gallery-modal').foundation('open')
+		})
+	}
+})
+
+//////////////////////////////////////////////////////////
 //      		Template to copy and edit
 
 $(function(){

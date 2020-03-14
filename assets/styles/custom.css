@@ -229,6 +229,25 @@ span.deleteicon span {
 	background-size: contain;
 	cursor: pointer;
 }
+.align-items-center{
+	display: flex;
+	align-self: center;
+	flex-direction: column;
+}
+.wp-block-gallery figcaption{
+	pointer-events: none;
+}
+#gallery-modal figure{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+#gallery-modal figure img{
+	height: auto;
+	max-height: 80%;
+	width: auto;
+}
 
 /*
 To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow
@@ -272,6 +291,9 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	}
 	#utility-nav li{
 		margin: 0 0 0 1.5rem;
+	}
+	#modal-image figure img {
+		max-width: 55%;
 	}
 }
 
