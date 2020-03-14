@@ -180,7 +180,8 @@ pre > code {
 	margin: 2rem 0;
 }
 #top-bar-menu{
-	padding-bottom: 1rem;
+	padding-bottom: 2em;
+	margin-bottom: 1em;
 }
 .top-bar{
 	background-color: transparent;
