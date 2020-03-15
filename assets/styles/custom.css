@@ -126,6 +126,9 @@ pre > code {
 	font-weight: inherit;
 	color: inherit;
 }
+.wp-block-image{
+	clear: both;
+}
 .entry-content .alignright, .entry-content img.alignright,
 .entry-content .alignleft, .entry-content img.alignleft{
 	display: table;
