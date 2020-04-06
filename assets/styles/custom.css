@@ -252,6 +252,12 @@ span.deleteicon span {
 	max-height: 95%;
 	width: auto;
 }
+.reveal .close-button:hover{
+	color: inherit;
+}
+body.admin-bar .reveal{
+	top: 2em;
+}
 
 /*
 To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow
