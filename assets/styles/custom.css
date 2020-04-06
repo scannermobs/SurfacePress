@@ -134,8 +134,8 @@ pre > code {
 	display: table;
 	margin-top: 1em;
 }
-#content .align-right,
-#content .align-left{
+#content .alignright,
+#content .alignleft{
 	max-width: 50%;
 }
 #content figure.wp-block-image > img{
