@@ -210,6 +210,7 @@ pre > code {
 }
 #mainnav{
 	margin: 0;
+	color: #333;
 }
 #mainnav li{
 	display: block;
@@ -218,6 +219,14 @@ pre > code {
 }
 #mainnav li a{
 	font-weight: 600;
+}
+#mainnav .active > a,
+#mainnav .current-menu-item > a,
+#mainnav .current-menu-ancestor > a,
+#mainnav .current-page-ancestor > a{
+	background-color: transparent;
+	text-decoration: underline;
+	color: inherit;
 }
 span.deleteicon {
 	position: relative;
