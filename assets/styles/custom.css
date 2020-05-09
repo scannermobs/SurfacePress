@@ -136,7 +136,7 @@ pre > code {
 }
 #content .alignright,
 #content .alignleft{
-	max-width: 50%;
+	max-width: 30%;
 }
 #content figure.wp-block-image > img{
 	width: 100%;
@@ -156,7 +156,7 @@ pre > code {
 	margin: 0 1.5rem 0 0;
 }
 #comments{
-	margin-top: 8em;
+	padding-top: 6em;
 }
 .utility-nav a{
 	display: inline-block;
