@@ -24,7 +24,7 @@ $(function(){
 
 $(function(){
 	$('input[type=search]').wrap('<span class="deleteicon" />').after($('<span/>').click(function() {
-    $('input[type=search]').val('')
+    $(this).prev('input[type=search]').val('')
 	}))
 })
 
