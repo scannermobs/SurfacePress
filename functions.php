@@ -62,6 +62,14 @@ function fouc_protect_against () {
 <?php
 }
 
+// ACF options page in wp admin menu
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
+
+// Change text to leave a reply on comment form
+function isa_comment_reform ($arg) {
+$arg['title_reply'] = __('What do you think about this?');
+return $arg;
+}
+add_filter('comment_form_defaults','isa_comment_reform');
