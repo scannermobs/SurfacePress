@@ -126,6 +126,10 @@ pre > code {
 	font-family: inherit;
 	font-weight: inherit;
 	color: inherit;
+	max-height: 40em;
+	overflow: auto;
+	display: block;
+	font-size: 0.8em;
 }
 .wp-block-image{
 	clear: both;
