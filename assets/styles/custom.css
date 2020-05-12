@@ -21,10 +21,10 @@ a:focus{
 	outline: none;
 	opacity: 0.7;
 }
-main a{
+p a{
 	color: #1a7bb5;
 }
-main a:hover{
+p a:hover{
 	text-decoration: underline;
 }
 .button{
