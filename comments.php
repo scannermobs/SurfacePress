@@ -8,13 +8,14 @@
 if ( post_password_required() ) {
 	return;
 }
+if ( comments_open() ) :
 ?>
 
 <div id="comments" class="comments-area grid-container">
 
 	<div class="grid-x grid-margin-x grid-padding-x">
 
-		<div class="small-12 medium-8 large-8 cell">
+		<div class="cell">
 
 			<?php // You can start editing here ?>
 
@@ -22,9 +23,9 @@ if ( post_password_required() ) {
 				<h2 class="comments-title">
 					<?php
 						printf( // WPCS: XSS OK.
-							esc_html( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'jointswp' ) ),
+							esc_html( _nx( 'There is 1 comment about this page', 'There are %1$s comments about this page', get_comments_number(), 'comments title', 'jointswp' ) ),
 							number_format_i18n( get_comments_number() ),
-							'<span>' . get_the_title() . '</span>'
+							//'<span>' . get_the_title() . '</span>'
 						);
 					?>
 				</h2>
@@ -73,3 +74,4 @@ if ( post_password_required() ) {
 	</div>
 
 </div><!-- #comments -->
+<?php endif; ?>
