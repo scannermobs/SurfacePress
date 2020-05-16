@@ -4,7 +4,7 @@
 body{
 	color: #222;
 	font-family: 'Roboto', sans-serif;
-	font-size: 0.75rem;
+	font-size: 0.8rem;
 	line-height: 1.5;
 }
 p{
@@ -304,7 +304,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 */
 @media all and (min-width: 40em){
 	body{
-		font-size: 0.85rem;
+		font-size: 1rem;
 	}
 	#utility-nav ul{
 		justify-content: end
@@ -331,7 +331,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 */
 @media all and (min-width: 64em){
 	body{
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 }
 
