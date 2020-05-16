@@ -104,9 +104,22 @@ h6, .h6{
 }
 #content ul, #content ol, #content dl{
 	margin: 2em 0 2em 2em;
-}
-#content ul, #content ol, #content dl{
 	list-style-position: outside;
+}
+.has-small-font-size{
+	font-size: 0.8em;
+}
+.has-normal-font-size{
+	font-size: 1em;
+}
+.has-medium-font-size{
+	font-size: 1.2em;
+}
+.has-large-font-size{
+	font-size: 1.4em;
+}
+.has-huge-font-size{
+	font-size: 1.6em;
 }
 blockquote, blockquote p{
 	color: #757575;
@@ -307,7 +320,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 		font-size: 1rem;
 	}
 	#utility-nav ul{
-		justify-content: end
+		justify-content: end;
 	}
 	#utility-nav li{
 		margin: 0 0 0 1.5rem;
