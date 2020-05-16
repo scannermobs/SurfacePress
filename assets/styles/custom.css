@@ -74,15 +74,15 @@ h6, .h6{
 }
 
 /* Base settings for content area, edit as needed */
-#content p,
-#content h1,
-#content h2,
-#content h3,
-#content h4,
-#content h5,
-#content h6,
-#content pre,
-#content hr{
+#content p:not(:first-child),
+#content h1:not(:first-child),
+#content h2:not(:first-child),
+#content h3:not(:first-child),
+#content h4:not(:first-child),
+#content h5:not(:first-child),
+#content h6:not(:first-child),
+#content pre:not(:first-child),
+#content hr:not(:first-child){
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
