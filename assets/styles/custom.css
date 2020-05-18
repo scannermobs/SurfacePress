@@ -265,6 +265,19 @@ span.deleteicon span {
 .wp-block-gallery figcaption{
 	pointer-events: none;
 }
+#modal-accessibility .close-button span{
+	vertical-align: middle;
+}
+#modal-accessibility .close-button small{
+	vertical-align: middle;
+	font-size: 0.5em;
+}
+#modal-accessibility a{
+	color: #111;
+}
+#modal-accessibility .tabs-title > a{
+	font-size: 1em;
+}
 #gallery-modal figure{
 	display: flex;
 	align-items: center;

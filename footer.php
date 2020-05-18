@@ -14,9 +14,9 @@
 
 						<div class="small-12 medium-12 large-12 cell">
 							<nav role="navigation">
-	    						<?php joints_footer_links(); ?>
-	    					</nav>
-	    				</div>
+	    					<?php joints_footer_links(); ?>
+    					</nav>
+    				</div>
 
 						<div class="small-12 medium-12 large-12 cell">
 							<p class="source-org copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Made by <a href="surfaceimpression.digital">Surface Impression</a>.</small></p>
@@ -37,7 +37,7 @@
 
 	      <div class="grid-x grid-margin-x grid-padding-x">
 
-	        <div class="cell medium-3 large-4">
+	        <div class="cell large-3">
             <img class="access-image" src="/wp-content/themes/outsidein/assets/images/oi-main-logo-multi.png" alt="">
             <p>These options can change the way this website looks, which may help you to use it more easily.</p>
 	        </div>
@@ -54,7 +54,7 @@
               <div class="tabs-panel is-active" id="contrast">
                 <div class="grid-x grid-margin-x">
                   <div class="cell auto">
-                    <h4>Standard contrast</h4>
+                    <p class="h6">Standard contrast</p>
                     <img src="/wp-content/themes/outsidein/assets/images/access-standard.png" alt="">
                     <div class="switch large">
                       <input class="switch-input" id="access-contrast-standard" type="radio" name="accessContrast" value="standard" checked>
@@ -66,7 +66,7 @@
                     </div>
                   </div>
                   <div class="cell auto">
-                    <h4>Low contrast</h4>
+                    <p class="h6">Low contrast</p>
                     <img src="/wp-content/themes/outsidein/assets/images/access-contrast-low.png" alt="">
                     <div class="switch large">
                       <input class="switch-input" id="access-contrast-low" type="radio" name="accessContrast" value="low">
@@ -78,7 +78,7 @@
                     </div>
                   </div>
                   <div class="cell auto">
-                    <h4>High contrast</h4>
+                    <p class="h6">High contrast</p>
                     <img src="/wp-content/themes/outsidein/assets/images/access-contrast-high.png" alt="">
                     <div class="switch large">
                       <input class="switch-input" id="access-contrast-high" type="radio" name="accessContrast" value="high">
@@ -92,11 +92,11 @@
                 </div>
               </div>
 
-											<!-- Panel 2 -->
+							<!-- Panel 2 -->
 							<div class="tabs-panel" id="text">
 								<div class="grid-x grid-margin-x">
 									<div class="cell auto">
-										<h4>Standard text</h4>
+										<p class="h6">Standard text</p>
 											<img src="/wp-content/themes/outsidein/assets/images/access-standard.png" alt="">
 											<div class="switch large">
 												<input class="switch-input" id="access-text-standard" type="radio" name="accessText" value="standard" checked>
@@ -108,7 +108,7 @@
 											</div>
 									</div>
 									<div class="cell auto">
-										<h4>Large text</h4>
+										<p class="h6">Large text</p>
 										<img src="/wp-content/themes/outsidein/assets/images/access-text-large.png" alt="">
 										<div class="switch large">
 											<input class="switch-input" id="access-text-large" type="radio" name="accessText" value="large">
@@ -120,7 +120,7 @@
 										</div>
 									</div>
 									<div class="cell auto">
-										<h4>Extra large text</h4>
+										<p class="h6">Extra large text</p>
 										<img src="/wp-content/themes/outsidein/assets/images/access-text-xl.png" alt="">
 										<div class="switch large">
 											<input class="switch-input" id="access-text-xl" type="radio" name="accessText" value="xl">
@@ -137,6 +137,7 @@
           </div>
         </div>
 			</div>
+			<br>
       <button class="close-button" data-close aria-label="Close modal" type="button">
 				<small>Finish & Save</small> <span aria-hidden="true">&times;</span>
 			</button>
