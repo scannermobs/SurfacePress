@@ -30,7 +30,7 @@
 
 		</div> <!-- end .off-canvas-wrapper -->
 
-		<div class="reveal large" id="modal-accessibility" data-reveal>
+		<div class="reveal small" id="modal-accessibility" data-reveal>
 			<br>
 			<br>
 	  	<div class="grid-container">

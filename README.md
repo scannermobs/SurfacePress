@@ -27,7 +27,7 @@ Already integrated with a accessibility options system, which uses [js cookie](h
 
 * Please use [Real Favicon Generator](https://realfavicongenerator.net/) to generate a custom favicon, and replace the files in the theme root directory
 * Headings in the main stylesheet (`custom.css`) can be created at: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow
-* Information about best development practices can be found at: [handbook.surfaceimpression.digital](handbook.surfaceimpression.digital)
+* Information about best development practices can be found at: [handbook.surfaceimpression.digital](https://handbook.surfaceimpression.digital)
 
 ## Contributing
 

@@ -2,7 +2,7 @@
 // Adjust the breakpoint of the title-bar by adjusting this variable
 $breakpoint = "medium"; ?>
 
-<div class="title-bar" data-responsive-toggle="top-bar-menu" data-hide-for="<?php echo $breakpoint ?>" data-tpl="nav-header">
+<div class="title-bar" data-responsive-toggle="top-bar-menu" data-hide-for="<?php echo $breakpoint ?>" data-tpl="nav-default">
 
 	<ul id="mobile-branding">
 
