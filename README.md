@@ -4,7 +4,7 @@ A starter theme for WordPress for rapid setup and ease of editing.
 
 Currently using Foundation 6.5.3.
 
-## Getting Started
+## Getting started
 
 The setup is the same as installing any standard WordPress theme.
 
@@ -12,13 +12,22 @@ Please edit `assets>scripts>scripts.js`, `assets>styles>custom.css` and `functio
 
 The default nav template is `parts>nav-default.php`, the other navs in this folder are unedited from the JointsWP original files.
 
-## Comes Pre-installed With/Uses
+## Comes pre-installed with/uses
 
 * [Foundation](https://foundation.zurb.com/) -- The web framework
 * [Google Fonts](https://fonts.google.com/) -- Optimal settings for custom fonts
 * [Font Awesome](https://fontawesome.com/) -- For easy icon fonts
 * [Cookie Consent](https://cookieconsent.osano.com/) -- Cookie law popup
-* [Real Favicon Generator](https://realfavicongenerator.net/) -- Favicon generation, simply replace the files in theme root to modify
+
+## Accessibility options
+
+Already integrated with a accessibility options system, which uses [js cookie](https://github.com/js-cookie/js-cookie) to set data-attributes on the `body` tag, with (basic) coresponding css.
+
+## Notes
+
+* Please use [Real Favicon Generator](https://realfavicongenerator.net/) to generate a custom favicon, and replace the files in the theme root directory
+* Headings in the main stylesheet (`custom.css`) can be created at: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow
+* Information about best development practices can be found at: [handbook.surfaceimpression.digital](handbook.surfaceimpression.digital)
 
 ## Contributing
 
