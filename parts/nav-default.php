@@ -50,7 +50,7 @@ $breakpoint = "medium"; ?>
 
 			<ul class="cell menu" role="menubar">
 
-				<li role="menuitem"><a href="">Accessibility</a></li>
+				<li role="menuitem"><a data-open="modal-accessibility">Accessibility</a></li>
 
 				<li role="menuitem"><a href="">Log in</a></li>
 

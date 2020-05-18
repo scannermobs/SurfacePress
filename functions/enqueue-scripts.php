@@ -11,6 +11,9 @@ function site_scripts() {
     // Adding scripts file in the footer
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/scripts/scripts.js', array( 'jquery' ), filemtime(get_template_directory() . '/assets/scripts'), true );
 
+		// Adding cookie js
+    wp_enqueue_script( 'cookie-js', get_template_directory_uri() . '/assets/scripts/js.cookie.js', array(), true);
+
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/styles/style.css', array(), filemtime(get_template_directory() . '/assets/styles'), 'all' );
 

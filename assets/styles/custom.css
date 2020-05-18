@@ -349,6 +349,45 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	}
 }
 
+
+/*
+ █████╗  ██████╗ ██████╗███████╗███████╗███████╗     ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗███████╗███████╗
+██╔══██╗██╔════╝██╔════╝██╔════╝██╔════╝██╔════╝    ██╔════╝██╔═══██╗██╔═══██╗██║ ██╔╝██║██╔════╝██╔════╝
+███████║██║     ██║     █████╗  ███████╗███████╗    ██║     ██║   ██║██║   ██║█████╔╝ ██║█████╗  ███████╗
+██╔══██║██║     ██║     ██╔══╝  ╚════██║╚════██║    ██║     ██║   ██║██║   ██║██╔═██╗ ██║██╔══╝  ╚════██║
+██║  ██║╚██████╗╚██████╗███████╗███████║███████║    ╚██████╗╚██████╔╝╚██████╔╝██║  ██╗██║███████╗███████║
+╚═╝  ╚═╝ ╚═════╝ ╚═════╝╚══════╝╚══════╝╚══════╝     ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+*/
+
+/*_______________ Low Contrast ____________*/
+body[data-cookie-contrast=low] #content{
+	opacity: 0.6;
+}
+/*_______________ High Contrast ____________*/
+body[data-cookie-contrast=high] main{
+	background-color: #fff;
+}
+body[data-cookie-contrast=high] #content,
+body[data-cookie-contrast=high] #content h1,
+body[data-cookie-contrast=high] #content h2,
+body[data-cookie-contrast=high] #content h3,
+body[data-cookie-contrast=high] #content h4,
+body[data-cookie-contrast=high] #content h5,
+body[data-cookie-contrast=high] #content h6,
+body[data-cookie-contrast=high] #content p,
+body[data-cookie-contrast=high] #content a:not(.button),
+body[data-cookie-contrast=high] #content li{
+	color: #000;
+}
+body[data-cookie-text=large] main.main{
+	font-size: 120%;
+}
+/*_______________ XL Text ____________*/
+body[data-cookie-text=xl] main.main{
+	font-size: 140%;
+}
+
+
 /*
 ██████╗  █████╗ ███████╗███████╗    ██╗███╗   ███╗ ██████╗
 ██╔══██╗██╔══██╗██╔════╝██╔════╝    ██║████╗ ████║██╔════╝

@@ -51,6 +51,48 @@ $(function(){
 })
 
 //////////////////////////////////////////////////////////
+//   		Accessibility stylesheet cookie machine
+
+$(function(){
+
+	// Contrast cookie
+	if (Cookies.get('contrast')){
+		$('body').attr('data-cookie-contrast', Cookies.get('contrast'))
+	} else{
+		Cookies.set('contrast','standard')
+		$('body').attr('data-cookie-contrast', Cookies.get('contrast'))
+	}
+
+	// Text cookie
+	if (Cookies.get('text')){
+		$('body').attr('data-cookie-text', Cookies.get('text'))
+	} else{
+		Cookies.set('text','standard')
+		$('body').attr('data-cookie-text', Cookies.get('text'))
+	}
+
+	// Contrast function
+	$('#contrast input').removeAttr('checked')
+	$('#contrast').find($('[value="' + Cookies.get('contrast') + '"]')).attr('checked', 'checked')
+
+	$('#contrast input').click(function(){
+		var value = $(this).val()
+		Cookies.set('contrast', value)
+		$('body').attr('data-cookie-contrast', Cookies.get('contrast'))
+	})
+
+	// Text function
+	$('#text input').removeAttr('checked')
+	$('#text').find($('[value="' + Cookies.get('text') + '"]')).attr('checked', 'checked')
+
+	$('#text input').click(function(){
+		var value = $(this).val()
+		Cookies.set('text', value)
+		$('body').attr('data-cookie-text', Cookies.get('text'))
+	})
+})
+
+//////////////////////////////////////////////////////////
 //      		Template to copy and edit
 
 $(function(){

@@ -24,8 +24,7 @@ if ( comments_open() ) :
 					<?php
 						printf( // WPCS: XSS OK.
 							esc_html( _nx( 'There is 1 comment about this page', 'There are %1$s comments about this page', get_comments_number(), 'comments title', 'jointswp' ) ),
-							number_format_i18n( get_comments_number() ),
-							//'<span>' . get_the_title() . '</span>'
+							number_format_i18n( get_comments_number() )
 						);
 					?>
 				</h2>
