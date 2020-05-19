@@ -24,14 +24,14 @@ Already integrated with an accessibility options system, which uses [js cookie](
 ## Notes
 
 * Please use [Real Favicon Generator](https://realfavicongenerator.net/) to generate a custom favicon, and replace the files in the theme root directory
-* Headings (eg for the media queries) in the main stylesheet (`custom.css`) can be created at: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow -- these make the media queries easy to follow, and help to visually break up longer stylesheet documents
+* Headings (eg for the media queries) in the main stylesheet (`custom.css`) can be created [here](http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow) -- these make the media queries easier to follow, and help to visually break up longer stylesheet documents
 * Information about best development practices can be found at: [handbook.surfaceimpression.digital](https://handbook.surfaceimpression.digital)
 
 ## Contributing
 
 All feedback is welcome! This is a work-in-progress and will not be perfect, but its use should make for easier collaboration and maintenence. If you run into any issues or have any suggestions please Slack or email Ben C or an SI project manager.
 
-Please read [CONTRIBUTING.md](https://raw.githubusercontent.com/scannermobs/SurfacePress/master/contributing.md) for details on the code of conduct, and the process for submitting pull requests.
+Please read [CONTRIBUTING.md](https://github.com/scannermobs/SurfacePress/blob/master/contributing.md) for details on the code of conduct, and the process for submitting pull requests.
 
 ## Authors
 
