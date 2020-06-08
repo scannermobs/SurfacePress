@@ -2,7 +2,7 @@
 /* Please use Foundation's visibility classes
 [ .show-for-sr, .hide (not .hidden) etc], rather than making your own */
 body{
-	color: #222;
+	color: #111;
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.8rem;
 	line-height: 1.5;
@@ -209,11 +209,10 @@ pre > code {
 	justify-content: space-between;
 	padding: 1rem 1.22rem;
 	background-color: inherit;
-	color: #333;
 	font-weight: 700;
 }
 .title-bar .menu-icon::after{
-	background-color: #222;
+	background-color: #111;
 }
 .table-scroll{
 	font-size: 80%;
@@ -226,7 +225,6 @@ pre > code {
 }
 #mainnav{
 	margin: 0;
-	color: #333;
 }
 #mainnav li{
 	display: block;
