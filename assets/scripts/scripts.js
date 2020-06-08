@@ -93,6 +93,92 @@ $(function(){
 })
 
 //////////////////////////////////////////////////////////
+//								Show more
+
+$(function(){
+	if($('span[id^=more-]').length){
+		$('span[id^=more-]').each(function(){
+			var readMore = $(this)
+			var list = readMore.parent('div')
+			list.children().each(function(){
+				if($(this).isAfter(readMore)){
+					$(this).addClass('show-for-sr')
+				}
+			})
+			$('<span class="show-more-wrap"><span class="show-more" data-toggle>Show more</span></span>').insertAfter($(this))
+			$(this).next('.show-more-wrap').children('.show-more').click(function(e){
+				e.preventDefault()
+				$(this).parents().nextAll().removeClass('show-for-sr')
+				$(this).addClass('show-for-sr')
+			})
+		})
+	}
+})
+
+//////////////////////////////////////////////////////////
+//							Main nav drop-down
+
+$(function(){
+	function doMenu(){
+		$('#mainnav .menu-toggle').remove()
+		$('#mainnav').css('padding-bottom', 0)
+		if($(window).width() > 700){
+			function menuShow(elem){
+				var li = elem.parent()
+				$('#mainnav > li').not(li).removeClass('show')
+				$(elem).toggleClass('show')
+				var x = li.position().left
+				var w = $('#mainnav').innerWidth()
+				var ul = $(elem).siblings('ul')
+				$('#mainnav > li > ul').not(ul).addClass('show-for-sr')
+				$(elem).siblings('ul').toggleClass('show-for-sr').css({
+					'left': '-'+x+'px',
+					'width': w
+				})
+				if($(elem).hasClass('show')){
+					var h = li.children('ul').innerHeight()
+					$('#mainnav').css('padding-bottom', h)
+				} else {
+					$('#mainnav').css('padding-bottom', 0)
+				}
+				if(li.is('.active, .current-menu-ancestor, .current-page-ancestor')){
+					li.toggleClass('show')
+				}
+			}
+			$('#mainnav > li > ul').addClass('show-for-sr')
+			$('<span class="menu-toggle">').insertBefore('#mainnav > li > ul')
+			$('#mainnav > li .menu-toggle').click(function(){
+				menuShow($(this))
+			})
+			// For tabbing through links
+			// Would be nice to make this work properly when you shift+tab (go backwards)
+			// Do it as a function? https://stackoverflow.com/questions/1359018/how-do-i-attach-events-to-dynamic-html-elements-with-jquery
+			var down = false
+			$(document).mousedown(function() {
+				down = true
+			}).mouseup(function() {
+				down = false
+			})
+			$('#mainnav > li.menu-item-has-children > a').focusin(function(){
+				if(!down){
+					menuShow($(this).parent().children('.menu-toggle'))
+				}
+			})
+		} else{
+			$('#mainnav .show-for-sr').removeClass('show-for-sr')
+			$('#mainnav ul').attr('style', '')
+		}
+	}
+	doMenu()
+	window.onresize = function(event) {
+		doMenu()
+	}
+	// Couple of solutions for fixing hierarchy problems
+	//if(window.location.pathname.includes('search-the-archive')) $('#mainnav a:contains(Search the archive)').parent().addClass('active').parent().parent().addClass('current-menu-ancestor')
+	//if(window.location.pathname.includes('/news/')) $('#mainnav a:contains(News)').parent().addClass('active')
+})
+
+//////////////////////////////////////////////////////////
 //      		Template to copy and edit
 
 $(function(){
