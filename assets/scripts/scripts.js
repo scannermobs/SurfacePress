@@ -126,6 +126,7 @@ $(function(){
 			function menuShow(elem){
 				var li = elem.parent()
 				$('#mainnav > li').not(li).removeClass('show')
+				$('#mainnav .menu-toggle').not(elem).removeClass('show')
 				$(elem).toggleClass('show')
 				var x = li.position().left
 				var w = $('#mainnav').innerWidth()
