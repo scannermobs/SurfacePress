@@ -73,3 +73,21 @@ $arg['title_reply'] = __('What do you think about this?');
 return $arg;
 }
 add_filter('comment_form_defaults','isa_comment_reform');
+
+// Remove archive title prefix
+function hide_the_archive_title_prefix( $title ) {
+	$title_parts = explode( ': ', $title, 2 );
+	if ( ! empty( $title_parts[1] ) ) {
+		$title = wp_kses(
+			$title_parts[1],
+			array(
+				'span' => array(
+					'class' => array(),
+				),
+			)
+		);
+		$title = '<span class="show-for-sr">' . esc_html( $title_parts[0] ) . ': </span>' . $title;
+	}
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'hide_the_archive_title_prefix' );

@@ -29,20 +29,24 @@ get_header(); ?>
 
 		</header>
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div class="grid-container">
 
-			<!-- To see additional archive styles, visit the /parts directory -->
-			<?php get_template_part( 'parts/loop', 'archive' ); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<?php endwhile; ?>
+				<!-- To see additional archive styles, visit the /parts directory -->
+				<?php get_template_part( 'parts/loop', 'archive' ); ?>
 
-			<?php joints_page_navi(); ?>
+			<?php endwhile; ?>
 
-		<?php else : ?>
+				<?php joints_page_navi(); ?>
 
-			<?php get_template_part( 'parts/content', 'missing' ); ?>
+			<?php else : ?>
 
-		<?php endif; ?>
+				<?php get_template_part( 'parts/content', 'missing' ); ?>
+
+			<?php endif; ?>
+
+		</div>
 
 	</main> <!-- end #main -->
 

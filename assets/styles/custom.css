@@ -23,10 +23,12 @@ a:focus{
 	outline: none;
 	opacity: 0.7;
 }
-p a{
+p a,
+main li a{
 	color: #1a7bb5;
 }
-p a:hover{
+p a:hover,
+main li a:hover{
 	text-decoration: underline;
 }
 .button{
@@ -41,12 +43,12 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
 	font-weight: bold;
 	font-family: inherit;
-	line-height: inherit;
+	line-height: 1.2;
 }
 .grid-container{
 	max-width: 75rem; /* <-- The main site width, adjust as needed */
 }
-#content{
+main{
 	padding-top: 1em;
 }
 .clear{
@@ -77,35 +79,35 @@ h6, .h6{
 }
 
 /* Base settings for content area, edit as needed */
-#content p:not(:first-child),
-#content h1:not(:first-child),
-#content h2:not(:first-child),
-#content h3:not(:first-child),
-#content h4:not(:first-child),
-#content h5:not(:first-child),
-#content h6:not(:first-child),
-#content pre:not(:first-child),
-#content hr:not(:first-child){
+main p:not(:first-child),
+main h1:not(:first-child),
+main h2:not(:first-child),
+main h3:not(:first-child),
+main h4:not(:first-child),
+main h5:not(:first-child),
+main h6:not(:first-child),
+main pre:not(:first-child),
+main hr:not(:first-child){
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
-#content figure{
+main figure{
 	margin-top: 4em;
 	margin-bottom: 4em;
 }
-#content li{
+main li{
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 }
-#content h1,
-#content h2,
-#content h3,
-#content h4,
-#content h5,
-#content h6{
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6{
 	clear: both;
 }
-#content ul, #content ol, #content dl{
+main ul, main ol, main dl{
 	margin: 2em 0 2em 2em;
 	list-style-position: outside;
 }
@@ -155,7 +157,7 @@ pre > code{
 	display: table;
 	margin-top: 2em;
 }
-#content figure.wp-block-image > img{
+main figure.wp-block-image > img{
 	width: 100%;
 }
 
@@ -347,7 +349,29 @@ body.admin-bar .reveal{
 	text-decoration: underline;
 }
 .home #mainnav .active > a{
-	box-shadow: none;
+	text-decoration: none;
+}
+h1.page-title,
+h1.entry-title{
+	font-weight: 600;
+	margin: 2em 0;
+	text-align: center;
+}
+.listing .text p{
+	margin: 0 0 1em;
+}
+.listing figure{
+	margin: 0;
+}
+.listing article{
+	margin-bottom: 2em;
+}
+.listing article a{
+	padding: 2em 1em;
+	background-color: #e4e4e4;
+}
+.listing article a > :last-child{
+	margin-bottom: 0;
 }
 
 /*
@@ -437,8 +461,8 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	#utility-nav li{
 		margin: 0 0 0 1.5rem;
 	}
-	#content .alignright,
-	#content .alignleft{
+	main .alignright,
+	main .alignleft{
 		max-width: 40%;
 	}
 	#gallery-modal figure img{
@@ -533,23 +557,23 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 */
 
 /*_______________ Low Contrast ____________*/
-body[data-cookie-contrast=low] #content{
+body[data-cookie-contrast=low] main{
 	opacity: 0.6;
 }
 /*_______________ High Contrast ____________*/
 body[data-cookie-contrast=high] main{
 	background-color: #fff;
 }
-body[data-cookie-contrast=high] #content,
-body[data-cookie-contrast=high] #content h1,
-body[data-cookie-contrast=high] #content h2,
-body[data-cookie-contrast=high] #content h3,
-body[data-cookie-contrast=high] #content h4,
-body[data-cookie-contrast=high] #content h5,
-body[data-cookie-contrast=high] #content h6,
-body[data-cookie-contrast=high] #content p,
-body[data-cookie-contrast=high] #content a:not(.button),
-body[data-cookie-contrast=high] #content li{
+body[data-cookie-contrast=high] main,
+body[data-cookie-contrast=high] main h1,
+body[data-cookie-contrast=high] main h2,
+body[data-cookie-contrast=high] main h3,
+body[data-cookie-contrast=high] main h4,
+body[data-cookie-contrast=high] main h5,
+body[data-cookie-contrast=high] main h6,
+body[data-cookie-contrast=high] main p,
+body[data-cookie-contrast=high] main a:not(.button),
+body[data-cookie-contrast=high] main li{
 	color: #000;
 }
 body[data-cookie-text=large] main.main{
