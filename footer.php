@@ -30,7 +30,7 @@
 
 		</div> <!-- end .off-canvas-wrapper -->
 
-		<div class="reveal small" id="modal-accessibility" data-reveal>
+		<div class="reveal large" id="modal-accessibility" data-reveal>
 			<br>
 			<br>
 	  	<div class="grid-container">
@@ -38,12 +38,12 @@
 	      <div class="grid-x grid-margin-x grid-padding-x">
 
 	        <div class="cell large-3">
-            <img class="access-image" src="/wp-content/themes/outsidein/assets/images/oi-main-logo-multi.png" alt="">
             <p>These options can change the way this website looks, which may help you to use it more easily.</p>
 	        </div>
 
 	        <div class="cell auto">
-            <h1 class="main-title">Accessibility options</h1>
+            <p class="lead">Accessibility options</p>
+						<br>
             <ul class="tabs" data-tabs id="access-tabs">
                 <li class="tabs-title is-active"><a href="#contrast" aria-selected="true"><i class="fas fa-adjust"></i> Display contrast</a></li>
                 <li class="tabs-title"><a href="#text"><i class="fas fa-text-height"></i> Text options</a></li>
@@ -54,40 +54,46 @@
               <div class="tabs-panel is-active" id="contrast">
                 <div class="grid-x grid-margin-x">
                   <div class="cell auto">
-                    <p class="h6">Standard contrast</p>
-                    <img src="/wp-content/themes/outsidein/assets/images/access-standard.png" alt="">
-                    <div class="switch large">
-                      <input class="switch-input" id="access-contrast-standard" type="radio" name="accessContrast" value="standard" checked>
-                      <label class="switch-paddle" for="access-contrast-standard">
-                        <span class="show-for-sr">Contrast toggle</span>
-                        <span class="switch-active" aria-hidden="true">On</span>
-                        <span class="switch-inactive" aria-hidden="true">Off</span>
-                      </label>
-                    </div>
+                    <p>Standard contrast</p>
+										<div class="grid-x grid-margin-x align-baseline">
+	                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="">
+	                    <div class="switch large">
+	                      <input class="switch-input" id="access-contrast-standard" type="radio" name="accessContrast" value="standard" checked>
+	                      <label class="switch-paddle" for="access-contrast-standard">
+	                        <span class="show-for-sr">Contrast toggle</span>
+	                        <span class="switch-active" aria-hidden="true">On</span>
+	                        <span class="switch-inactive" aria-hidden="true">Off</span>
+	                      </label>
+	                    </div>
+										</div>
                   </div>
                   <div class="cell auto">
-                    <p class="h6">Low contrast</p>
-                    <img src="/wp-content/themes/outsidein/assets/images/access-contrast-low.png" alt="">
-                    <div class="switch large">
-                      <input class="switch-input" id="access-contrast-low" type="radio" name="accessContrast" value="low">
-                      <label class="switch-paddle" for="access-contrast-low">
-                        <span class="show-for-sr">Contrast toggle</span>
-                        <span class="switch-active" aria-hidden="true">On</span>
-                        <span class="switch-inactive" aria-hidden="true">Off</span>
-                      </label>
-                    </div>
+                    <p>Low contrast</p>
+										<div class="grid-x grid-margin-x align-baseline">
+	                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-low.png" alt="">
+	                    <div class="switch large">
+	                      <input class="switch-input" id="access-contrast-low" type="radio" name="accessContrast" value="low">
+	                      <label class="switch-paddle" for="access-contrast-low">
+	                        <span class="show-for-sr">Contrast toggle</span>
+	                        <span class="switch-active" aria-hidden="true">On</span>
+	                        <span class="switch-inactive" aria-hidden="true">Off</span>
+	                      </label>
+	                    </div>
+										</div>
                   </div>
                   <div class="cell auto">
-                    <p class="h6">High contrast</p>
-                    <img src="/wp-content/themes/outsidein/assets/images/access-contrast-high.png" alt="">
-                    <div class="switch large">
-                      <input class="switch-input" id="access-contrast-high" type="radio" name="accessContrast" value="high">
-                      <label class="switch-paddle" for="access-contrast-high">
-                        <span class="show-for-sr">Contrast toggle</span>
-                        <span class="switch-active" aria-hidden="true">On</span>
-                        <span class="switch-inactive" aria-hidden="true">Off</span>
-                      </label>
-                    </div>
+                    <p>High contrast</p>
+										<div class="grid-x grid-margin-x align-baseline">
+	                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-high.png" alt="">
+	                    <div class="switch large">
+	                      <input class="switch-input" id="access-contrast-high" type="radio" name="accessContrast" value="high">
+	                      <label class="switch-paddle" for="access-contrast-high">
+	                        <span class="show-for-sr">Contrast toggle</span>
+	                        <span class="switch-active" aria-hidden="true">On</span>
+	                        <span class="switch-inactive" aria-hidden="true">Off</span>
+	                      </label>
+	                    </div>
+										</div>
                   </div>
                 </div>
               </div>
@@ -96,8 +102,9 @@
 							<div class="tabs-panel" id="text">
 								<div class="grid-x grid-margin-x">
 									<div class="cell auto">
-										<p class="h6">Standard text</p>
-											<img src="/wp-content/themes/outsidein/assets/images/access-standard.png" alt="">
+										<p>Standard text</p>
+										<div class="grid-x grid-margin-x align-baseline">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="">
 											<div class="switch large">
 												<input class="switch-input" id="access-text-standard" type="radio" name="accessText" value="standard" checked>
 												<label class="switch-paddle" for="access-text-standard">
@@ -106,30 +113,35 @@
 													<span class="switch-inactive" aria-hidden="true">Off</span>
 												</label>
 											</div>
-									</div>
-									<div class="cell auto">
-										<p class="h6">Large text</p>
-										<img src="/wp-content/themes/outsidein/assets/images/access-text-large.png" alt="">
-										<div class="switch large">
-											<input class="switch-input" id="access-text-large" type="radio" name="accessText" value="large">
-											<label class="switch-paddle" for="access-text-large">
-												<span class="show-for-sr">Contrast toggle</span>
-												<span class="switch-active" aria-hidden="true">On</span>
-												<span class="switch-inactive" aria-hidden="true">Off</span>
-											</label>
 										</div>
 									</div>
 									<div class="cell auto">
-										<p class="h6">Extra large text</p>
-										<img src="/wp-content/themes/outsidein/assets/images/access-text-xl.png" alt="">
-										<div class="switch large">
-											<input class="switch-input" id="access-text-xl" type="radio" name="accessText" value="xl">
-											<label class="switch-paddle" for="access-text-xl">
-												<span class="show-for-sr">Contrast toggle</span>
-												<span class="switch-active" aria-hidden="true">On</span>
-												<span class="switch-inactive" aria-hidden="true">Off</span>
-											</label>
-                    </div>
+										<p>Large text</p>
+										<div class="grid-x grid-margin-x align-baseline">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-large.png" alt="">
+											<div class="switch large">
+												<input class="switch-input" id="access-text-large" type="radio" name="accessText" value="large">
+												<label class="switch-paddle" for="access-text-large">
+													<span class="show-for-sr">Contrast toggle</span>
+													<span class="switch-active" aria-hidden="true">On</span>
+													<span class="switch-inactive" aria-hidden="true">Off</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="cell auto">
+										<p>Extra large text</p>
+										<div class="grid-x grid-margin-x align-baseline">
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-xl.png" alt="">
+											<div class="switch large">
+												<input class="switch-input" id="access-text-xl" type="radio" name="accessText" value="xl">
+												<label class="switch-paddle" for="access-text-xl">
+													<span class="show-for-sr">Contrast toggle</span>
+													<span class="switch-active" aria-hidden="true">On</span>
+													<span class="switch-inactive" aria-hidden="true">Off</span>
+												</label>
+	                    </div>
+										</div>
                   </div>
                 </div>
               </div>
