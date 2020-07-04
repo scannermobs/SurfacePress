@@ -189,6 +189,7 @@ main figure.wp-block-image > img{
 	line-height: 1;
 	padding: 0.5em 0.8em;
 	border: 1px solid rgba(0,0,0,0.1);
+	font-weight: 600;
 }
 #main-branding,
 #mobile-branding{
