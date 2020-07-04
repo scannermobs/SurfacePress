@@ -166,7 +166,7 @@ pre > code{
 }
 .wp-block-image img,
 .wp-block-image a,
-.blocks-gallery-item img,
+.blocks-gallery-grid .blocks-gallery-item img,
 .blocks-gallery-item a{
 	width: 100%;
 }
