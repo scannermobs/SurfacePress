@@ -25,6 +25,10 @@ The default nav template is `parts > nav-default.php`; the other nav types in th
 * [Font Awesome](https://fontawesome.com/) -- For icon fonts
 * [Cookie Consent](https://cookieconsent.osano.com/) -- Cookie law popup
 
+### Nav system
+
+Comes with an advanced two-tier nav system, which is screen reader-friendly and works for all devices. Can easily be removed or customised.
+
 ### Accessibility options
 
 Already integrated with an accessibility options system, which uses [js cookie](https://github.com/js-cookie/js-cookie) to set data-attributes on the `body` tag, with (basic) corresponding css.
