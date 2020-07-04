@@ -2,6 +2,14 @@
 
 An in-house starter theme for WordPress designed for rapid setup and ease of editing.
 
+### Why use a starter theme?
+
+Using off-the-shelf themes is best avoided if they will be modified much, due to potential difficulties with theme updates. In general it's best to use a *starter theme* which is as lightweight as possible, meaning your styling can be built very easily without having to remove or override the theme's existing base style. JointsWP is an excellent starter theme, which integrates Foundation into the WordPress theme system very well whilst allowing for maximum customisation.
+
+### Why use SurfacePress?
+
+SurfacePress is built on top of JointsWP and offers more functionality out-of-the-box. Styles, design decisions and page layout are kept as simple as possible, whilst also providing shortcuts for many common website design patterns. Customisation is not only recommended, but there are helpers built into the theme for the best way to go about customising, such as syntax suggestions and asset templates.
+
 ## Getting started
 
 The setup is the same as installing any standard WordPress theme. Please customise the theme directly.
