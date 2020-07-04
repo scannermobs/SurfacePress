@@ -52,6 +52,10 @@ $(function(){
 				var img = $(this).find('img').attr('src')
 				if($(this).attr('href', img)){
 					$(this).addClass('lightbox-link')
+					// Above is the class which disables the system for mobile,
+					// check the corresponding css rule to alter.
+					// Below is the width check, which can be edited or removed.
+					// By default the lightbox works for tablets up.
 					if($(window).width() >= 768){
 						$(this).click(function(event){
 							doGal(this)

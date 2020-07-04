@@ -17,9 +17,13 @@ The default nav template is `parts > nav-default.php`; the other nav types in th
 * [Font Awesome](https://fontawesome.com/) -- For icon fonts
 * [Cookie Consent](https://cookieconsent.osano.com/) -- Cookie law popup
 
-## Accessibility options
+### Accessibility options
 
 Already integrated with an accessibility options system, which uses [js cookie](https://github.com/js-cookie/js-cookie) to set data-attributes on the `body` tag, with (basic) corresponding css.
+
+### Lightbox system
+
+Comes with an automatic lightbox system, which works by finding wp block images that have links set to 'media file' (ie themselves). For galleries arrows are added. By default this system is disabled for mobile, as generally lightboxes are of little use here, but there are some notes in the JavaScript about how to alter this very easily.
 
 ## Notes
 
