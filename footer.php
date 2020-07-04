@@ -45,8 +45,8 @@
             <p class="lead">Accessibility options</p>
 						<br>
             <ul class="tabs" data-tabs id="access-tabs">
-                <li class="tabs-title is-active"><a href="#contrast" aria-selected="true"><i class="fas fa-adjust"></i> Display contrast</a></li>
-                <li class="tabs-title"><a href="#text"><i class="fas fa-text-height"></i> Text options</a></li>
+                <li class="tabs-title is-active"><a href="#contrast" aria-selected="true"><i class="fas fa-adjust"></i>&nbsp;&nbsp;Display contrast</a></li>
+                <li class="tabs-title"><a href="#text"><i class="fas fa-text-height"></i>&nbsp;&nbsp;Text options</a></li>
             </ul>
 
             <div class="tabs-content" data-tabs-content="access-tabs">
