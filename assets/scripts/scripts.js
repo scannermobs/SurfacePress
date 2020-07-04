@@ -32,22 +32,69 @@ $(function(){
 //							Lightbox
 
 $(function(){
-	if($('.wp-block-gallery').length){
-		var modal = '<div class="reveal full" id="gallery-modal" data-reveal> \
-									<figure></figure>\
-									<button class="close-button" data-close aria-label="Close modal" type="button"> \
-										<span aria-hidden="true">&times;</span> \
-									</button> \
-								</div>'
-		var reveal = new Foundation.Reveal($(modal))
-		$('.wp-block-gallery a').click(function(event){
-			event.preventDefault()
-			var img = $(this).find('img').clone()
-			$('#gallery-modal figure img').remove()
-			$('#gallery-modal figure').prepend(img)
-			$('#gallery-modal').foundation('open')
-		})
+	setupGal()
+	window.onresize = function(event) {
+		setupGal()
 	}
+	function setupGal(){
+		$('.lightbox-link').removeClass('lightbox-link')
+		if($('.wp-block-gallery a, .wp-block-image a').length){
+			var modal = '<div class="reveal full" id="gallery-modal" data-reveal> \
+										<figure></figure>\
+										<button class="arrows prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>\
+										<button class="arrows next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>\
+										<button class="close-button" data-close aria-label="Close modal" type="button"> \
+											<span aria-hidden="true">&times;</span> \
+										</button> \
+									</div>'
+			var reveal = new Foundation.Reveal($(modal))
+			$('.wp-block-gallery a, .wp-block-image a').each(function(){
+				var img = $(this).find('img').attr('src')
+				if($(this).attr('href', img)){
+					$(this).addClass('lightbox-link')
+					if($(window).width() >= 768){
+						$(this).click(function(event){
+							doGal(this)
+						})
+					}
+				}
+			})
+		}
+	}
+	function doGal(elem){
+		event.preventDefault()
+		$('#gallery-modal').foundation('close')
+		var img = $(elem).find('img').clone()
+		var cap = $(elem).parent().find('figcaption').clone()
+		$('#gallery-modal figure figcaption').remove()
+		if(cap.length){
+			$('#gallery-modal figure').prepend(cap)
+		}
+		$('#gallery-modal figure img').remove()
+		$('#gallery-modal figure').prepend(img)
+		$('#gallery-modal').foundation('open')
+		var link = $(elem)
+		if(!$(elem).parent('.wp-block-image').length){
+			if($(link).parentsUntil('.blocks-gallery-grid').prev().length){
+				$('#gallery-modal .prev').removeClass('hide')
+			} else {
+				$('#gallery-modal .prev').addClass('hide')
+			}
+			if($(link).parentsUntil('.blocks-gallery-grid').next().length){
+				$('#gallery-modal .next').removeClass('hide')
+			} else {
+				$('#gallery-modal .next').addClass('hide')
+			}
+		} else{
+			$('#gallery-modal .prev, #gallery-modal .next').addClass('hide')
+		}
+	}
+	$('#gallery-modal .prev').click(function(elem){
+		doGal($('.blocks-gallery-grid img[src="'+$('#gallery-modal img').attr('src')+'"]').parentsUntil('.blocks-gallery-grid').prev().find('a'))
+	})
+	$('#gallery-modal .next').click(function(elem){
+		doGal($('.blocks-gallery-grid img[src="'+$('#gallery-modal img').attr('src')+'"]').parentsUntil('.blocks-gallery-grid').next().find('a'))
+	})
 })
 
 //////////////////////////////////////////////////////////

@@ -50,50 +50,66 @@
             </ul>
 
             <div class="tabs-content" data-tabs-content="access-tabs">
+							<br>
               <!-- Panel 1 -->
               <div class="tabs-panel is-active" id="contrast">
                 <div class="grid-x grid-margin-x">
-                  <div class="cell auto">
+                  <div class="cell small-8 medium-auto">
                     <p>Standard contrast</p>
-										<div class="grid-x grid-margin-x align-baseline">
-	                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="">
-	                    <div class="switch large">
-	                      <input class="switch-input" id="access-contrast-standard" type="radio" name="accessContrast" value="standard" checked>
-	                      <label class="switch-paddle" for="access-contrast-standard">
-	                        <span class="show-for-sr">Contrast toggle</span>
-	                        <span class="switch-active" aria-hidden="true">On</span>
-	                        <span class="switch-inactive" aria-hidden="true">Off</span>
-	                      </label>
-	                    </div>
+										<div class="grid-x grid-margin-x align-middle">
+											<div class="cell auto">
+	                    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="">
+											</div>
+											<div class="cell auto">
+		                    <div class="switch large">
+		                      <input class="switch-input" id="access-contrast-standard" type="radio" name="accessContrast" value="standard" checked>
+		                      <label class="switch-paddle" for="access-contrast-standard">
+		                        <span class="show-for-sr">Contrast toggle</span>
+		                        <span class="switch-active" aria-hidden="true">On</span>
+		                        <span class="switch-inactive" aria-hidden="true">Off</span>
+		                      </label>
+		                    </div>
+											</div>
 										</div>
+										<br>
                   </div>
-                  <div class="cell auto">
+                  <div class="cell small-8 medium-auto">
                     <p>Low contrast</p>
-										<div class="grid-x grid-margin-x align-baseline">
-	                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-low.png" alt="">
-	                    <div class="switch large">
-	                      <input class="switch-input" id="access-contrast-low" type="radio" name="accessContrast" value="low">
-	                      <label class="switch-paddle" for="access-contrast-low">
-	                        <span class="show-for-sr">Contrast toggle</span>
-	                        <span class="switch-active" aria-hidden="true">On</span>
-	                        <span class="switch-inactive" aria-hidden="true">Off</span>
-	                      </label>
-	                    </div>
+										<div class="grid-x grid-margin-x align-middle">
+											<div class="cell auto">
+	                    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-low.png" alt="">
+											</div>
+											<div class="cell auto">
+		                    <div class="switch large">
+		                      <input class="switch-input" id="access-contrast-low" type="radio" name="accessContrast" value="low">
+		                      <label class="switch-paddle" for="access-contrast-low">
+		                        <span class="show-for-sr">Contrast toggle</span>
+		                        <span class="switch-active" aria-hidden="true">On</span>
+		                        <span class="switch-inactive" aria-hidden="true">Off</span>
+		                      </label>
+		                    </div>
+											</div>
 										</div>
+										<br>
                   </div>
-                  <div class="cell auto">
+                  <div class="cell small-8 medium-auto">
                     <p>High contrast</p>
-										<div class="grid-x grid-margin-x align-baseline">
-	                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-high.png" alt="">
-	                    <div class="switch large">
-	                      <input class="switch-input" id="access-contrast-high" type="radio" name="accessContrast" value="high">
-	                      <label class="switch-paddle" for="access-contrast-high">
-	                        <span class="show-for-sr">Contrast toggle</span>
-	                        <span class="switch-active" aria-hidden="true">On</span>
-	                        <span class="switch-inactive" aria-hidden="true">Off</span>
-	                      </label>
-	                    </div>
+										<div class="grid-x grid-margin-x align-middle">
+											<div class="cell auto">
+	                    	<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-high.png" alt="">
+											</div>
+											<div class="cell auto">
+		                    <div class="switch large">
+		                      <input class="switch-input" id="access-contrast-high" type="radio" name="accessContrast" value="high">
+		                      <label class="switch-paddle" for="access-contrast-high">
+		                        <span class="show-for-sr">Contrast toggle</span>
+		                        <span class="switch-active" aria-hidden="true">On</span>
+		                        <span class="switch-inactive" aria-hidden="true">Off</span>
+		                      </label>
+		                    </div>
+											</div>
 										</div>
+										<br>
                   </div>
                 </div>
               </div>
@@ -101,54 +117,70 @@
 							<!-- Panel 2 -->
 							<div class="tabs-panel" id="text">
 								<div class="grid-x grid-margin-x">
-									<div class="cell auto">
+									<div class="cell small-8 medium-auto">
 										<p>Standard text</p>
-										<div class="grid-x grid-margin-x align-baseline">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="">
-											<div class="switch large">
-												<input class="switch-input" id="access-text-standard" type="radio" name="accessText" value="standard" checked>
-												<label class="switch-paddle" for="access-text-standard">
-													<span class="show-for-sr">Contrast toggle</span>
-													<span class="switch-active" aria-hidden="true">On</span>
-													<span class="switch-inactive" aria-hidden="true">Off</span>
-												</label>
+										<div class="grid-x grid-margin-x align-middle">
+											<div class="cell auto">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="">
+											</div>
+											<div class="cell auto">
+												<div class="switch large">
+													<input class="switch-input" id="access-text-standard" type="radio" name="accessText" value="standard" checked>
+													<label class="switch-paddle" for="access-text-standard">
+														<span class="show-for-sr">Contrast toggle</span>
+														<span class="switch-active" aria-hidden="true">On</span>
+														<span class="switch-inactive" aria-hidden="true">Off</span>
+													</label>
+												</div>
 											</div>
 										</div>
+										<br>
 									</div>
-									<div class="cell auto">
+									<div class="cell small-8 medium-auto">
 										<p>Large text</p>
-										<div class="grid-x grid-margin-x align-baseline">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-large.png" alt="">
-											<div class="switch large">
-												<input class="switch-input" id="access-text-large" type="radio" name="accessText" value="large">
-												<label class="switch-paddle" for="access-text-large">
-													<span class="show-for-sr">Contrast toggle</span>
-													<span class="switch-active" aria-hidden="true">On</span>
-													<span class="switch-inactive" aria-hidden="true">Off</span>
-												</label>
+										<div class="grid-x grid-margin-x align-middle">
+											<div class="cell auto">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-large.png" alt="">
+											</div>
+											<div class="cell auto">
+												<div class="switch large">
+													<input class="switch-input" id="access-text-large" type="radio" name="accessText" value="large">
+													<label class="switch-paddle" for="access-text-large">
+														<span class="show-for-sr">Contrast toggle</span>
+														<span class="switch-active" aria-hidden="true">On</span>
+														<span class="switch-inactive" aria-hidden="true">Off</span>
+													</label>
+												</div>
 											</div>
 										</div>
+										<br>
 									</div>
-									<div class="cell auto">
+									<div class="cell small-8 medium-auto">
 										<p>Extra large text</p>
-										<div class="grid-x grid-margin-x align-baseline">
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-xl.png" alt="">
-											<div class="switch large">
-												<input class="switch-input" id="access-text-xl" type="radio" name="accessText" value="xl">
-												<label class="switch-paddle" for="access-text-xl">
-													<span class="show-for-sr">Contrast toggle</span>
-													<span class="switch-active" aria-hidden="true">On</span>
-													<span class="switch-inactive" aria-hidden="true">Off</span>
-												</label>
-	                    </div>
+										<div class="grid-x grid-margin-x align-middle">
+											<div class="cell auto">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-xl.png" alt="">
+											</div>
+											<div class="cell auto">
+												<div class="switch large">
+													<input class="switch-input" id="access-text-xl" type="radio" name="accessText" value="xl">
+													<label class="switch-paddle" for="access-text-xl">
+														<span class="show-for-sr">Contrast toggle</span>
+														<span class="switch-active" aria-hidden="true">On</span>
+														<span class="switch-inactive" aria-hidden="true">Off</span>
+													</label>
+		                    </div>
+											</div>
 										</div>
                   </div>
+									<br>
                 </div>
               </div>
             </div>
           </div>
         </div>
 			</div>
+			<br>
 			<br>
       <button class="close-button" data-close aria-label="Close modal" type="button">
 				<small>Finish & Save</small> <span aria-hidden="true">&times;</span>

@@ -23,6 +23,13 @@ a:focus{
 	outline: none;
 	opacity: 0.7;
 }
+button{
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+}
+button:hover{
+	opacity: 0.8;
+}
 p a,
 main li a{
 	color: #1a7bb5;
@@ -230,14 +237,18 @@ main figure.wp-block-image > img{
 #mainnav{
 	margin: 0;
 	color: #111;
+	overflow: hidden;
 }
 #mainnav li{
 	display: block;
 	list-style: none;
 	margin-bottom: 0.5em;
 }
-#mainnav li a{
+#mainnav li a, #footer-links a{
 	font-weight: 600;
+	padding: 0 0 0 0.15em;
+	color: #111;
+	display: inline-block;
 }
 #mainnav .active > a,
 #mainnav .current-menu-item > a,
@@ -250,6 +261,24 @@ main figure.wp-block-image > img{
 span.deleteicon{
 	position: relative;
 	display: block;
+}
+#mainnav .active > a, #footer-links .active > a,
+#mainnav .current-menu-ancestor > a,
+#mainnav .current-page-ancestor > a{
+	background-color: inherit;
+	color: inherit;
+	text-decoration: underline;
+}
+#mainnav .current-menu-ancestor.show > a,
+#mainnav .current-page-ancestor.show > a{
+	text-decoration: none;
+}
+#mainnav a:focus, #mainnav a:hover,
+#footer-links a:focus, #footer-links a:hover{
+	text-decoration: underline;
+}
+.home #mainnav .active > a{
+	text-decoration: none;
 }
 span.deleteicon span{
 	position: absolute;
@@ -282,21 +311,46 @@ span.deleteicon span{
 #modal-accessibility .tabs-title > a{
 	font-size: 1em;
 }
+#gallery-modal{
+	background-color: rgba(0,0,0,0.85);
+}
+#gallery-modal .close-button:hover{
+	color: #fff;
+}
 #gallery-modal figure{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	flex-direction: column;
 }
 #gallery-modal figure img{
 	height: auto;
-	max-height: 95%;
+	max-height: 80%;
 	width: auto;
+	box-shadow: 0 0 7vw rgba(0,0,0,0.5);
+}
+#gallery-modal figcaption{
+	margin-top: 1em;
+	color: #fff;
+	max-width: 80%;
+}
+#gallery-modal .arrows{
+	color: #fff;
+	position: absolute;
+	font-size: 2em;
+	bottom: 50%;
+}
+.arrows.prev{
+	left: 1em;
+}
+.arrows.next{
+	right: 1em;
 }
 .reveal .close-button:hover{
 	color: inherit;
 }
-body.admin-bar .reveal{
+body.admin-bar .reveal.full{
 	top: 2em;
 }
 #header{
@@ -318,38 +372,6 @@ body.admin-bar .reveal{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: contain;
-}
-#mainnav{
-	margin: 0;
-}
-#mainnav li{
-	display: block;
-	list-style: none;
-	margin-bottom: 0.5em;
-}
-#mainnav li a, #footer-links a{
-	/* font-weight: 600; */
-	padding: 0 0 0 0.15em;
-	color: #111;
-	display: inline-block;
-}
-#mainnav .active > a, #footer-links .active > a,
-#mainnav .current-menu-ancestor > a,
-#mainnav .current-page-ancestor > a{
-	background-color: inherit;
-	color: inherit;
-	text-decoration: underline;
-}
-#mainnav .current-menu-ancestor.show > a,
-#mainnav .current-page-ancestor.show > a{
-	text-decoration: none;
-}
-#mainnav a:focus, #mainnav a:hover,
-#footer-links a:focus, #footer-links a:hover{
-	text-decoration: underline;
-}
-.home #mainnav .active > a{
-	text-decoration: none;
 }
 h1.page-title,
 h1.entry-title{
@@ -441,8 +463,32 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	#utility-nav ul{
 		justify-content: flex-end;
 	}
+	html.is-reveal-open {
+		position: initial;
+	}
+	html.is-reveal-open.zf-has-scroll{
+		overflow-y: hidden;
+	}
+	body.admin-bar .reveal{
+		top: 46px !important;
+	}
+	.lightbox-link{
+		pointer-events: none;
+		cursor: default;
+	}
 }
 
+/*
+████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗     ██████╗ ███╗   ██╗██╗  ██╗   ██╗
+╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝    ██╔═══██╗████╗  ██║██║  ╚██╗ ██╔╝
+   ██║   ███████║██████╔╝██║     █████╗     ██║       ██║   ██║██╔██╗ ██║██║   ╚████╔╝
+   ██║   ██╔══██║██╔══██╗██║     ██╔══╝     ██║       ██║   ██║██║╚██╗██║██║    ╚██╔╝
+   ██║   ██║  ██║██████╔╝███████╗███████╗   ██║       ╚██████╔╝██║ ╚████║███████╗██║
+   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝        ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝
+*/
+@media all and (min-width: 40em) and (max-width: 64em){
+
+}
 /*
 ████████╗ █████╗ ██████╗ ██╗     ███████╗████████╗    ██╗   ██╗██████╗
 ╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝╚══██╔══╝    ██║   ██║██╔══██╗
@@ -517,9 +563,13 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 		display: inline-block;
 		vertical-align: sub;
 		margin-left: 0.4em;
+		transition: transform 0.2s ease;
 	}
 	.menu-toggle.show{
 		transform: rotate(180deg);
+	}
+	body.admin-bar .reveal.full{
+		top: 46px !important;
 	}
 }
 
@@ -538,11 +588,17 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	#mainnav{
 		margin: 3rem 0 1rem;
 	}
-	#main-branding a{
-		height: 8rem;
-	}
 	#mainnav li a, #footer-links li a{
 		font-size: 1em;
+	}
+	body.admin-bar .reveal.full{
+		top: 32px !important;
+	}
+	.arrows.prev{
+		left: 2em;
+	}
+	.arrows.next{
+		right: 2em;
 	}
 }
 
