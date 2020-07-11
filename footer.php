@@ -19,7 +19,7 @@
 						</div>
 
 						<div class="small-12 medium-12 large-12 cell">
-							<p class="source-org copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Made by <a href="surfaceimpression.digital">Surface Impression</a>.</small></p>
+							<p class="source-org copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Made by <a href="https://surfaceimpression.digital">Surface Impression</a>.</small></p>
 						</div>
 
 					</div> <!-- end #inner-footer -->
