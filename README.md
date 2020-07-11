@@ -27,7 +27,7 @@ The default nav template is `parts > nav-default.php`; the other nav types in th
 
 ### Nav system
 
-Comes with an advanced two-tier nav system, which is screen reader-friendly and works for all devices. Can easily be removed or customised.
+Comes with an advanced two-tier nav system, which is screen reader-friendly and works for all devices. Can easily be customised or removed.
 
 ### Accessibility options
 
