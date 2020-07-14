@@ -16,7 +16,7 @@ The setup is the same as installing any standard WordPress theme. Please customi
 
 The main stylesheet and JavaScript files are in `assets > scripts > scripts.js`, and `assets > styles > custom.css`. Please use `functions > enqueue-scripts.php` as required.
 
-The default nav template is `parts > nav-default.php` — the other nav types in this folder are unedited from the original JointsWP files. By default please use 'The Main Menu' for the main nav; 'The Off-Canvas Menu' is still registered and available to use if you wish. The default nav will be left-aligned with some spacing, but can be easily made full-width by setting `#mainnav` to `justify-content: space-between`.
+The default nav template is `parts > nav-default.php` -- the other nav types in this folder are unedited from the original JointsWP files. By default please use 'The Main Menu' for the main nav; 'The Off-Canvas Menu' is still registered and available to use if you wish. The default nav will be left-aligned with some spacing, but can be easily made full-width by setting `#mainnav` to `justify-content: space-between`.
 
 ## Comes pre-installed with/uses
 
