@@ -2,7 +2,7 @@
 /* Please use Foundation's visibility classes
 [ .show-for-sr, .hide (not .hidden) etc], rather than making your own */
 body{
-	color: #111;
+	color: #222;
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.8rem;
 	line-height: 1.5;
@@ -13,37 +13,44 @@ p{
 }
 a{
 	transition: opacity 0.2s ease;
-	color: #111;
+	color: #222;
 }
-a, a:hover{
+a:hover, a:focus{
 	color: inherit;
-}
-a:focus{
-	color: inherit;
-	outline: none;
-	opacity: 0.7;
-}
-button{
-	cursor: pointer;
-	transition: opacity 0.2s ease;
-}
-button:hover{
-	opacity: 0.8;
+	outline: inherit;
+	opacity: 0.85;
 }
 p a,
 main li a{
-	color: #1a7bb5;
+	color: #0c679d;
+	text-decoration: underline;
 }
 p a:hover,
 main li a:hover{
-	text-decoration: underline;
+	opacity: 1;
+	text-decoration: none;
 }
-.button{
-	background-color: #444;
+button,
+.button,
+.wp-block-button__link{
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+}
+.button,
+.wp-block-button__link{
+	background-color: #222;
 	color: #fff;
 }
-.button:focus, .button:hover{
-	background-color: #1a7bb5;
+button:hover, button:focus,
+.button:hover, .button:focus,
+.wp-block-button__link:hover, .wp-block-button__link:focus{
+	opacity: 0.85;
+}
+.button:hover, .button:focus,
+.wp-block-button__link:hover, .wp-block-button__link:focus{
+	color: inherit;
+	outline: none;
+	background-color: #222;
 	color: #fff;
 }
 h1, h2, h3, h4, h5, h6,
@@ -134,7 +141,7 @@ main ul, main ol, main dl{
 	font-size: 1.6em;
 }
 blockquote, blockquote p{
-	color: #757575;
+	color: #666;
 }
 blockquote{
 	margin: 2em 0;
@@ -143,7 +150,7 @@ blockquote{
 	overflow: auto;
 }
 ::placeholder{
-	color: #757575;
+	color: #666;
 }
 pre > code{
 	padding: 0;
@@ -200,7 +207,7 @@ pre > code{
 	margin: 0;
 }
 #mobile-branding a{
-	color: #000;
+	color: #222;
 	display: block;
 }
 #main-branding{
@@ -223,11 +230,11 @@ pre > code{
 	justify-content: space-between;
 	padding: 1rem 1.22rem;
 	background-color: inherit;
-	color: #111;
+	color: #222;
 	font-weight: 700;
 }
 .title-bar .menu-icon::after{
-	background-color: #111;
+	background-color: #222;
 }
 .table-scroll{
 	font-size: 80%;
@@ -240,7 +247,7 @@ pre > code{
 }
 #mainnav{
 	margin: 0;
-	color: #111;
+	color: #222;
 	overflow: hidden;
 }
 #mainnav li{
@@ -251,7 +258,7 @@ pre > code{
 #mainnav li a, #footer-links a{
 	font-weight: 600;
 	padding: 0 0 0 0.15em;
-	color: #111;
+	color: #222;
 	display: inline-block;
 }
 #mainnav .active > a,
@@ -302,6 +309,12 @@ span.deleteicon span{
 .wp-block-gallery figcaption{
 	pointer-events: none;
 }
+.lightbox-link{
+	transition: opacity 0.2s ease;
+}
+.lightbox-link:hover, .lightbox-link:focus{
+	opacity: 0.85;
+}
 #modal-accessibility .close-button span{
 	vertical-align: middle;
 }
@@ -310,7 +323,7 @@ span.deleteicon span{
 	font-size: 0.5em;
 }
 #modal-accessibility a{
-	color: #111;
+	color: #222;
 }
 #modal-accessibility .tabs-title > a{
 	font-size: 1em;
@@ -358,7 +371,7 @@ body.admin-bar .reveal.full{
 	top: 2em;
 }
 #header{
-	background-color: #e4e4e4;
+	background-color: #eee;
 }
 .entry-content .show-more-wrap{
 	text-align: center;
@@ -394,7 +407,7 @@ h1.entry-title{
 }
 .listing article a{
 	padding: 2em 1em;
-	background-color: #e4e4e4;
+	background-color: #eee;
 }
 .listing article a > :last-child{
 	margin-bottom: 0;
