@@ -40,7 +40,7 @@ Comes with an automatic lightbox system, which works by finding wp block images 
 ## Notes
 
 * Please use [Real Favicon Generator](https://realfavicongenerator.net/) to generate a custom favicon, and replace the files in the theme root directory
-* Headings (eg for the media queries) in the main stylesheet (`custom.css`) can be created [here](http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow) -- these make the media queries easier to follow, and help to visually break up longer stylesheet documents
+* Section headings in the main stylesheet (`custom.css`) can be created [here](http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow) -- these make sections such as the media queries easier to follow, and help to visually break up longer stylesheet documents
 * Information about best development practices can be found at: [handbook.surfaceimpression.digital](https://handbook.surfaceimpression.digital)
 
 ## Contributing
