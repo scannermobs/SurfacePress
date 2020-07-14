@@ -173,7 +173,7 @@ $(function(){
 $(function(){
 	function doMenu(){
 		$('#mainnav .menu-toggle').remove()
-		$('#mainnav').css('padding-bottom', 0)
+		$('#mainnav').css('padding-bottom', 1)
 		if($(window).width() > 700){
 			function menuShow(elem){
 				var li = elem.parent()
@@ -192,7 +192,7 @@ $(function(){
 					var h = li.children('ul').innerHeight()
 					$('#mainnav').css('padding-bottom', h)
 				} else {
-					$('#mainnav').css('padding-bottom', 0)
+					$('#mainnav').css('padding-bottom', 1)
 				}
 				if(li.is('.active, .current-menu-ancestor, .current-page-ancestor')){
 					li.toggleClass('show')
