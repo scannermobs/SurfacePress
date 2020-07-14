@@ -16,7 +16,7 @@ The setup is the same as installing any standard WordPress theme. Please customi
 
 The main stylesheet and JavaScript files are in `assets > scripts > scripts.js`, and `assets > styles > custom.css`. Please use `functions > enqueue-scripts.php` as required.
 
-The default nav template is `parts > nav-default.php`; the other nav types in this folder are unedited from the original JointsWP files.
+The default nav template is `parts > nav-default.php`; the other nav types in this folder are unedited from the original JointsWP files. By default please use 'The Main Menu' for the main nav; 'The Off-Canvas Menu' is still registered and available to use if you wish. The default nav will be left-aligned with some spacing, but can be easily made full-width by setting `#mainnav` to `justify-content: space-between`.
 
 ## Comes pre-installed with/uses
 
@@ -45,7 +45,7 @@ Comes with an automatic lightbox system, which works by finding wp block images 
 
 ## Contributing
 
-All feedback is welcome! This is a work-in-progress and will not be perfect, but its use should make for easier collaboration and maintenence. If you run into any issues or have any suggestions please Slack or email Ben C or an SI project manager.
+All feedback is welcome! This is a work-in-progress and will not be perfect, but its use should make for easier collaboration and maintenance. If you run into any issues or have any suggestions please Slack or email Ben C or an SI project manager.
 
 Please read [CONTRIBUTING.md](https://github.com/scannermobs/SurfacePress/blob/master/contributing.md) for details on the code of conduct, and the process for submitting pull requests.
 
