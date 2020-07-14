@@ -248,7 +248,6 @@ pre > code{
 #mainnav{
 	margin: 0;
 	color: #222;
-	overflow: hidden;
 }
 #mainnav li{
 	display: block;
@@ -534,8 +533,18 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	#mainnav{
 		margin: 1rem 0;
 		display: flex;
-		justify-content: space-between;
 		transition: padding 0.2s linear;
+		/* justify-content: space-between; */
+		/* Enable ^this if you'd like the nav stretched to fit */
+	}
+	#mainnav li{
+		display: block;
+		list-style: none;
+		margin-bottom: 0.5em;
+		margin-right: 2em;
+	}
+	#mainnav li:last-child{
+		margin-right: 0;
 	}
 	#mainnav li a, #footer-links li a{
 		font-size: 0.8em;
@@ -554,13 +563,12 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	#mainnav li ul:not(.show-for-sr){
 		position: absolute;
 	}
-	#mainnav li{
+	#mainnav > li{
 		position: relative;
 		left: -0.15em;
 	}
 	#mainnav li ul li{
 		display: inline-block;
-		margin-right: 2.5em;
 	}
 	#mainnav li ul li:last-child{
 		margin-right: 0;
