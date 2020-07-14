@@ -632,7 +632,7 @@ body[data-cookie-contrast=high] main h4,
 body[data-cookie-contrast=high] main h5,
 body[data-cookie-contrast=high] main h6,
 body[data-cookie-contrast=high] main p,
-body[data-cookie-contrast=high] main a:not(.button),
+body[data-cookie-contrast=high] main a:not(.button):not(.wp-block-file__button),
 body[data-cookie-contrast=high] main li{
 	color: #000;
 }
