@@ -77,19 +77,20 @@ $(function(){
 		$('#gallery-modal figure img').remove()
 		$('#gallery-modal figure').prepend(img)
 		$('#gallery-modal').foundation('open')
-		var link = $(elem)
-		if(!$(elem).parent('.wp-block-image').length){
-			if($(link).parentsUntil('.blocks-gallery-grid').prev().length){
+		if(!$(elem).parents('.wp-block-image').length){
+			console.log('foo')
+			if($(elem).parentsUntil('.blocks-gallery-grid').prev().length){
 				$('#gallery-modal .prev').removeClass('hide')
 			} else {
 				$('#gallery-modal .prev').addClass('hide')
 			}
-			if($(link).parentsUntil('.blocks-gallery-grid').next().length){
+			if($(elem).parentsUntil('.blocks-gallery-grid').next().length){
 				$('#gallery-modal .next').removeClass('hide')
 			} else {
 				$('#gallery-modal .next').addClass('hide')
 			}
 		} else{
+			console.log('bar')
 			$('#gallery-modal .prev, #gallery-modal .next').addClass('hide')
 		}
 	}
