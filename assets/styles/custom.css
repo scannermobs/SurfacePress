@@ -636,6 +636,11 @@ body[data-cookie-contrast=high] main a:not(.button):not(.wp-block-file__button),
 body[data-cookie-contrast=high] main li{
 	color: #000;
 }
+body[data-cookie-contrast=high]p a,
+body[data-cookie-contrast=high]main li a{
+	text-decoration: underline;
+}
+/*_______________ Large Text ____________*/
 body[data-cookie-text=large] main.main{
 	font-size: 120%;
 }
