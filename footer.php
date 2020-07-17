@@ -52,7 +52,8 @@
 						<div class="tabs-content" data-tabs-content="access-tabs">
 							<br>
 							<!-- Panel 1 -->
-							<div class="tabs-panel is-active" id="contrast">
+							<fieldset class="tabs-panel is-active" id="contrast">
+								<legend class="show-for-sr">Contrast options</legend>
 								<div class="grid-x grid-margin-x">
 									<div class="cell small-8 medium-auto">
 										<p>Standard contrast</p>
@@ -112,10 +113,11 @@
 										<br>
 									</div>
 								</div>
-							</div>
+							</fieldset>
 
 							<!-- Panel 2 -->
-							<div class="tabs-panel" id="text">
+							<fieldset class="tabs-panel" id="text">
+								<legend class="show-for-sr">Text options</legend>
 								<div class="grid-x grid-margin-x">
 									<div class="cell small-8 medium-auto">
 										<p>Standard text</p>
@@ -175,7 +177,7 @@
 									</div>
 									<br>
 								</div>
-							</div>
+							</fieldset>
 						</div>
 					</div>
 				</div>
