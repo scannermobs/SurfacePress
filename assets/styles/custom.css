@@ -395,22 +395,34 @@ h1.entry-title{
 	margin: 2em 0;
 	text-align: center;
 }
-.listing .text p{
+.listing-item .text p{
 	margin: 0 0 1em;
 }
-.listing figure{
+.listing-item figure{
 	margin: 0;
 }
-.listing article{
-	margin-bottom: 2em;
+.listing-item{
+	margin-bottom: 1.8rem;
 }
-.listing article a{
-	padding: 2em 1em;
+.listing-item .button:hover{
+	background-color: #222;
+}
+.listing-item a{
+	padding: 1em 0.7em;
 	background-color: #eee;
 }
-.listing article a > :last-child{
-	margin-bottom: 0;
+.grid-item  a{
+	display: block;
+	padding: 1em;
 }
+.grid-item .button{
+	margin: 0;
+}
+#grid[data-columns] .column { float: left; }
+#grid[data-columns] .size-1of1 { width: 100%; }
+#grid[data-columns] .size-1of2 { width: 50%; }
+#grid[data-columns] .size-1of3 { width: 33.333%; }
+#grid[data-columns] .size-1of4 { width: 25%; }
 
 /*
 To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow
@@ -474,7 +486,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	}
 	#mainnav .current-menu-ancestor > a,
 	#mainnav .current-page-ancestor > a{
-		box-shadow: none;
+		text-decoration: none;
 	}
 	#utility-nav ul{
 		justify-content: flex-end;
@@ -591,10 +603,13 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 		transition: transform 0.2s ease;
 	}
 	.menu-toggle.show{
-		transform: rotate(180deg);
+		transform: rotate(-180deg);
 	}
 	body.admin-bar .reveal.full{
 		top: 46px !important;
+	}
+	#grid[data-columns]::before {
+		content: '3 .column.size-1of3';
 	}
 }
 

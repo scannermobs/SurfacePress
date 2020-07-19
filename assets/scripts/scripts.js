@@ -232,6 +232,18 @@ $(function(){
 })
 
 //////////////////////////////////////////////////////////
+//      		Salvattore masonry style grid
+
+$(function(){
+	var grid = document.querySelector('[data-columns]')
+	//var item = document.createElement('article')
+	salvattore.recreateColumns(grid)
+	window.onresize = function(event) {
+		salvattore.recreateColumns(grid)
+	}
+})
+
+//////////////////////////////////////////////////////////
 //      		Template to copy and edit
 
 $(function(){
