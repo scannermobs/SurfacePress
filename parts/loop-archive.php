@@ -6,46 +6,32 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('listing-item grid-x grid-margin-x grid-padding-x'); ?> role="article" data-tpl="loop-archive">
+<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" data-tpl="loop-archive">
 
-	<div class="cell">
+	<a href="<?php echo get_the_permalink(); ?>" class="grid-x grid-padding-x" title="<?php the_title_attribute(); ?>" rel="bookmark">
 
-		<div class="grid-x grid-padding-x grid-margin-x">
+	<div class="auto cell text">
 
-			<div class="cell">
+		<p class="h4"><?php the_title(); ?></p>
 
-				<a href="<?php echo get_the_permalink(); ?>" class="grid-x grid-padding-x" title="<?php the_title_attribute(); ?>" rel="bookmark">
+		<?php //get_template_part( 'parts/content', 'byline' ); ?>
 
-					<div class="auto cell text">
-
-						<p class="h4"><?php the_title(); ?></p>
-
-						<?php //get_template_part( 'parts/content', 'byline' ); ?>
-
-						<?php echo wpautop(wp_trim_words( get_the_excerpt(), 15 )); ?>
-
-						<span class="button">Read more</span>
-
-					</div>
-
-					<?php if(get_the_post_thumbnail()): ?>
-
-					<div class="small-3 medium-2 cell">
-
-						<figure>
-							<?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?>
-						</figure>
-
-					</div>
-
-				<?php endif; ?>
-
-				</a>
-
-			</div>
-
-		</div>
+		<?php echo wpautop(wp_trim_words( get_the_excerpt(), 15 )); ?>
 
 	</div>
+
+	<?php if(get_the_post_thumbnail()): ?>
+
+	<div class="small-3 medium-2 cell">
+
+		<figure>
+			<?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?>
+		</figure>
+
+	</div>
+
+<?php endif; ?>
+
+</a>
 
 </article>
