@@ -37,6 +37,10 @@ Already integrated with an accessibility options system, which uses [js cookie](
 
 Comes with an automatic lightbox system, which works by finding wp block images that have links set to 'media file' (ie themselves). For galleries arrows are added. By default this system is disabled for mobile, as generally lightboxes are of little use here, but there are some notes in the JavaScript about how to alter this very easily.
 
+### Masonry grid
+
+Comes with [Masonry](https://github.com/desandro/masonry) pre-installed and ready to use. You'll see `archive.php` defaults to use the Masonry grid template (`loop-archive-grid-masonry.php`), but this can be easily switched to (`loop-archive.php`) for regular listings, or your own template for custom layouts.
+
 ## Notes
 
 * Please use [Real Favicon Generator](https://realfavicongenerator.net/) to generate a custom favicon, and replace the files in the theme root directory
