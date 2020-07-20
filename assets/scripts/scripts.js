@@ -53,7 +53,8 @@ $(function(){
 				if($(this).attr('href', img)){
 					$(this).addClass('lightbox-link')
 					// Above is the class which disables the system for mobile,
-					// check the corresponding css rule to alter.
+					// remove if not wanted, or check the corresponding css rule to adjust.
+
 					// Below is the width check, which can be edited or removed.
 					// By default the lightbox works for tablets up.
 					if($(window).width() >= 768){
@@ -183,7 +184,7 @@ $(function(){
 				var x = li.position().left
 				var w = $('#mainnav').innerWidth()
 				var ul = $(elem).siblings('ul')
-				$('#mainnav > li > ul').not(ul).addClass('show-for-sr')
+				$('#mainnav > li > ul').not(ul).addClass('show-for-sr, ff')
 				$(elem).siblings('ul').toggleClass('show-for-sr').css({
 					'left': '-'+x+'px',
 					'width': w
@@ -232,16 +233,20 @@ $(function(){
 })
 
 //////////////////////////////////////////////////////////
-//      		Salvattore masonry style grid
+//      		Masonry + FacetWP integration
 
 $(function(){
-	var grid = document.querySelector('[data-columns]')
-	//var item = document.createElement('article')
-	salvattore.recreateColumns(grid)
-	window.onresize = function(event) {
-		salvattore.recreateColumns(grid)
-	}
+	var msnry = $('[data-msnry]').masonry({
+		transitionDuration: 0,
+		itemSelector: 'article',
+		percentPosition: true
+	})
+	$(document).on('facetwp-loaded', function(){
+		msnry.masonry('reloadItems')
+		msnry.masonry('layout')
+	})
 })
+
 
 //////////////////////////////////////////////////////////
 //      		Template to copy and edit

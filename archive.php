@@ -33,7 +33,7 @@ get_header(); ?>
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<?php get_template_part( 'parts/loop', 'archive-grid-auto' ); ?>
+				<?php get_template_part( 'parts/loop', 'archive-grid-masonry' ); ?>
 
 			<?php endwhile; ?>
 

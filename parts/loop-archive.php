@@ -16,15 +16,17 @@
 
 				<a href="<?php echo get_the_permalink(); ?>" class="grid-x grid-padding-x" title="<?php the_title_attribute(); ?>" rel="bookmark">
 
-					<div class="auto cell text">
+					<div class="auto cell">
 
-						<p class="h4"><?php the_title(); ?></p>
+						<header>
+							<p class="h4 title"><?php the_title(); ?></p>
+							<?php //get_template_part( 'parts/content', 'byline' ); ?>
+						</header>
 
-						<?php //get_template_part( 'parts/content', 'byline' ); ?>
-
-						<?php echo wpautop(wp_trim_words( get_the_excerpt(), 15 )); ?>
-
-						<span class="button">Read more</span>
+						<section class="entry-content" itemprop="text">
+							<?php echo wpautop(wp_trim_words( get_the_excerpt(), 15 )); ?>
+							<span class="button">Read more</span>
+						</section>
 
 					</div>
 

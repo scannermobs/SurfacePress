@@ -5,21 +5,21 @@ function site_scripts() {
 
 // JS
 
-    // Register Foundation scripts
+    // Foundation scripts
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation-sites/dist/js/foundation.min.js', array( 'jquery' ), "6.4.1", true );
 
-		// Adding cookie js
+		// Cookie js
 		wp_enqueue_script( 'cookie-js', get_template_directory_uri() . '/assets/scripts/js.cookie.js', array(), true);
 
-		// Adding salvattore js
-		wp_enqueue_script( 'salvattore-js', get_template_directory_uri() . '/assets/scripts/salvattore.min.js', array('jquery'), true);
+		// Masonry js
+		wp_enqueue_script( 'masonry-js', get_template_directory_uri() . '/assets/scripts/masonry.pkgd.min.js', array(), true);
 
-    // Adding scripts file [Keep last]
+    // Main scripts file [Keep last]
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/scripts/scripts.js', array( 'jquery' ), filemtime(get_template_directory() . '/assets/scripts'), true );
 
 // CSS
 
-		// Register Foundation styles
+		// Foundation styles
     wp_enqueue_style( 'foundation-css', get_template_directory_uri() . '/foundation-sites/dist/css/foundation.min.css', array(), "6.4.1", 'all' );
 
 		// Google fonts
@@ -28,7 +28,7 @@ function site_scripts() {
 		// Fontawesome
     wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.8.1/css/all.css', false );
 
-    // Register main stylesheet
+    // Main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/styles/style.css', array(), filemtime(get_template_directory() . '/assets/styles'), 'all' );
 
     // Custom stylesheet [Keep last]

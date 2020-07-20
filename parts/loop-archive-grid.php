@@ -10,40 +10,36 @@ $grid_columns = 2; ?>
 
 <?php if( 0 === ( $wp_query->current_post  )  % $grid_columns ): ?>
 
-	<div class="grid-x grid-margin-x grid-padding-x archive-grid" data-equalizer>
+<div class="grid-x grid-margin-x grid-padding-x archive-grid" data-equalizer>
 
 <?php endif; ?>
 
-		<div class="small-12 medium-6 cell panel" data-equalizer-watch>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('grid-item listing-item cell medium-6'); ?> role="article" data-tpl="loop-archive-grid" data-equalizer-watch>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class('grid-item listing-item'); ?> role="article" data-tpl="loop-archive-grid">
+		<a href="<?php echo get_the_permalink(); ?>" class="" title="<?php the_title_attribute(); ?>" rel="bookmark">
 
-				<a href="<?php echo get_the_permalink(); ?>" class="" title="<?php the_title_attribute(); ?>" rel="bookmark">
+			<figure>
+				<?php the_post_thumbnail('full'); ?>
+			</figure>
 
-					<section class="featured-image" itemprop="text">
-						<?php the_post_thumbnail('full'); ?>
-					</section>
+			<br>
 
-					<br>
+			<header>
+				<p class="h4 title"><?php the_title(); ?></p>
+				<?php //get_template_part( 'parts/content', 'byline' ); ?>
+			</header>
 
-					<header class="article-header">
-						<h3 class="title"><?php the_title(); ?></h3>
-						<?php //get_template_part( 'parts/content', 'byline' ); ?>
-					</header>
+			<section class="entry-content" itemprop="text">
+				<?php echo wpautop(wp_trim_words( get_the_excerpt(), 15 )); ?>
+				<span class="button">Read more</span>
+			</section>
 
-					<section class="entry-content" itemprop="text">
-						<?php echo wpautop(wp_trim_words( get_the_excerpt(), 15 )); ?><span class="button">Read more</span>
-						<?php //the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?>
-					</section>
+		</a>
 
-				</a>
-
-			</article>
-
-		</div>
+	</article>
 
 <?php if( 0 === ( $wp_query->current_post + 1 )  % $grid_columns ||  ( $wp_query->current_post + 1 ) ===  $wp_query->post_count ): ?>
 
-	</div>
+</div>
 
 <?php endif; ?>
