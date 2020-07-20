@@ -236,15 +236,17 @@ $(function(){
 //      		Masonry + FacetWP integration
 
 $(function(){
-	var msnry = $('[data-msnry]').masonry({
-		transitionDuration: 0,
-		itemSelector: 'article',
-		percentPosition: true
-	})
-	$(document).on('facetwp-loaded', function(){
-		msnry.masonry('reloadItems')
-		msnry.masonry('layout')
-	})
+	if($('[data-msnry]').length){
+		var msnry = $('[data-msnry]').masonry({
+			transitionDuration: 0,
+			itemSelector: 'article',
+			percentPosition: true
+		})
+		$(document).on('facetwp-loaded', function(){
+			msnry.masonry('reloadItems')
+			msnry.masonry('layout')
+		})
+	}
 })
 
 
