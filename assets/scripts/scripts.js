@@ -249,6 +249,19 @@ $(function(){
 	}
 })
 
+//////////////////////////////////////////////////////////
+//      		iframe title generator
+
+$(function(){
+	$('iframe').each(function(){
+		if(!$(this).attr('title')){
+			var src = document.createElement('a')
+			src.href = $(this).attr('src')
+			$(this).attr('title', 'Embeded media from '+src.hostname)
+			src.remove()
+		}
+	})
+})
 
 //////////////////////////////////////////////////////////
 //      		Template to copy and edit
