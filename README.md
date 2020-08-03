@@ -41,6 +41,24 @@ Comes with an automatic lightbox system, which works by finding wp block images 
 
 Comes with [Masonry](https://github.com/desandro/masonry) pre-installed and ready to use. You'll see `archive.php` defaults to use the Masonry grid template (`loop-archive-grid-masonry.php`), but this can be easily switched to (`loop-archive.php`) for regular listings, or your own template for custom layouts.
 
+### Some handy utilities built into `functions.php`
+
+#### FOUC-protection
+
+There is a tiny bit of js in `functions.php` which in a screen reader and index-friendly way hides the whole page until the main assets are loaded, thereby protecting against the dreaded Flash of Unstyled Content (FOUC).
+
+#### ACF Options-ready
+
+ACF Options page is pre-setup via `functions.php`.
+
+#### Comment title Customisation
+
+Includes the function to customise the title reply, defaults to 'What do you think about this?'.
+
+#### Custom archive title
+
+Includes the function to customise the archive title, which is preserved in a screen reader=friendly way.
+
 ## Notes
 
 * Please use [Real Favicon Generator](https://realfavicongenerator.net/) to generate a custom favicon, and replace the files in the theme root directory
