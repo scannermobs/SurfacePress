@@ -43,21 +43,10 @@ Comes with [Masonry](https://github.com/desandro/masonry) pre-installed and read
 
 ### Some handy utilities built into `functions.php`
 
-#### FOUC-protection
-
-There is a tiny bit of js in `functions.php` which in a screen reader and index-friendly way hides the whole page until the main assets are loaded, thereby protecting against the dreaded Flash of Unstyled Content (FOUC).
-
-#### ACF Options-ready
-
-ACF Options page is pre-setup via `functions.php`.
-
-#### Comment title Customisation
-
-Includes the function to customise the title reply, defaults to 'What do you think about this?'.
-
-#### Custom archive title
-
-Includes the function to customise the archive title, which is preserved in a screen reader=friendly way.
+- FOUC-protection — a tiny bit of js in `functions.php` which in a screen reader and index-friendly way hides the whole page until the main assets are loaded, thereby protecting against the dreaded Flash of Unstyled Content (FOUC).
+- ACF Options pre-setup via `functions.php`.
+- Includes the function to customise the comment title reply, defaults to 'What do you think about this?'.
+- Includes the function to customise or remove the archive title prefix, which is preserved in a screen reader-friendly way to aid accessibility.
 
 ## Notes
 
