@@ -41,12 +41,14 @@ Comes with an automatic lightbox system, which works by finding wp block images 
 
 Comes with [Masonry](https://github.com/desandro/masonry) pre-installed and ready to use. You'll see `archive.php` defaults to use the Masonry grid template (`loop-archive-grid-masonry.php`), but this can be easily switched to (`loop-archive.php`) for regular listings, or your own template for custom layouts.
 
-### Some handy utilities built into `functions.php`
+### Utility functions
 
 - FOUC-protection — a tiny bit of js in `functions.php` which in a screen reader and index-friendly way hides the whole page until the main assets are loaded, thereby protecting against the dreaded Flash of Unstyled Content (FOUC).
 - ACF Options pre-setup via `functions.php`.
 - Includes the function to customise the comment title reply, defaults to 'What do you think about this?'.
 - Includes the function to customise or remove the archive title prefix, which is preserved in a screen reader-friendly way to aid accessibility.
+- JavaScript function in `scripts.js` which automatically gives search fields a clear button.
+- A working disclosure system based on the WordPress 'more' element.
 
 ## Notes
 
