@@ -184,7 +184,7 @@ $(function(){
 				var x = li.position().left
 				var w = $('#mainnav').innerWidth()
 				var ul = $(elem).siblings('ul')
-				$('#mainnav > li > ul').not(ul).addClass('show-for-sr, ff')
+				$('#mainnav > li > ul').not(ul).addClass('show-for-sr')
 				$(elem).siblings('ul').toggleClass('show-for-sr').css({
 					'left': '-'+x+'px',
 					'width': w
