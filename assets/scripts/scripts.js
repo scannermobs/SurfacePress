@@ -237,14 +237,17 @@ $(function(){
 
 $(function(){
 	if($('[data-msnry]').length){
-		var msnry = $('[data-msnry]').masonry({
+		var msnry = new Masonry('[data-msnry]', {
 			transitionDuration: 0,
 			itemSelector: 'article',
 			percentPosition: true
 		})
+		$(window).load(function(){
+			msnry.layout()
+		})
 		$(document).on('facetwp-loaded', function(){
-			msnry.masonry('reloadItems')
-			msnry.masonry('layout')
+			msnry.reloadItems()
+			msnry.layout()
 		})
 	}
 })
