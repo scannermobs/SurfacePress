@@ -79,7 +79,6 @@ $(function(){
 		$('#gallery-modal figure').prepend(img)
 		$('#gallery-modal').foundation('open')
 		if(!$(elem).parents('.wp-block-image').length){
-			console.log('foo')
 			if($(elem).parentsUntil('.blocks-gallery-grid').prev().length){
 				$('#gallery-modal .prev').removeClass('hide')
 			} else {
@@ -91,7 +90,6 @@ $(function(){
 				$('#gallery-modal .next').addClass('hide')
 			}
 		} else{
-			console.log('bar')
 			$('#gallery-modal .prev, #gallery-modal .next').addClass('hide')
 		}
 	}
