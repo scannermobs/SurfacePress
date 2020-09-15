@@ -91,3 +91,9 @@ function hide_the_archive_title_prefix( $title ) {
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'hide_the_archive_title_prefix' );
+
+// Woo support
+// function mytheme_add_woocommerce_support() {
+// 	add_theme_support( 'woocommerce' );
+// }
+// add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
