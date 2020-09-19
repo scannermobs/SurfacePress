@@ -13,7 +13,7 @@ p{
 }
 a{
 	transition: opacity 0.2s ease;
-	color: #222;
+	color: inherit;
 }
 a:hover, a:focus{
 	color: inherit;
