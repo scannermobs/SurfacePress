@@ -231,6 +231,31 @@ $(function(){
 })
 
 //////////////////////////////////////////////////////////
+//      		Nav here state fixer
+
+$(function(){
+	if(!$('#mainnav li.current-menu-item').length){
+		var match = false
+		var path = window.location.pathname
+		$('#mainnav li > a:not(.show-for-sr)').each(function(){
+			var link = new URL($(this).attr('href'))
+			if(link.pathname == path && match == false){
+				match = true
+				$(this).parent().addClass('current-menu-item').parents('li').addClass('current-menu-ancestor')
+			}
+		})
+		if(match == false){
+			$('#mainnav li > a:not(.show-for-sr)').each(function(){
+				var link = new URL($(this).attr('href'))
+				if(~path.indexOf(link.pathname)){
+					$(this).parent().addClass('current-menu-item').parents('li').addClass('current-menu-ancestor')
+				}
+			})
+		}
+	}
+})
+
+//////////////////////////////////////////////////////////
 //      		Masonry + FacetWP integration
 
 $(function(){
