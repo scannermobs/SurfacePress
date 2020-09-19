@@ -28,7 +28,7 @@
 
 			<div class="small-12 medium-12 large-12 cell">
 
-				<?php the_post_thumbnail('full'); ?>
+				<?php the_post_thumbnail('large'); ?>
 
 				<?php the_content(); ?>
 
