@@ -20,7 +20,7 @@
 				<a href="<?php echo get_the_permalink(); ?>" class="" title="<?php the_title_attribute(); ?>" rel="bookmark">
 
 					<figure>
-						<?php the_post_thumbnail('large'); ?>
+						<?php the_post_thumbnail('medium'); ?>
 					</figure>
 
 					<br>
