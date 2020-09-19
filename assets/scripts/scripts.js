@@ -237,7 +237,7 @@ $(function(){
 	if(!$('#mainnav li.current-menu-item').length){
 		var match = false
 		var path = window.location.pathname
-		$('#mainnav li > a:not(.show-for-sr)').each(function(){
+		$('#mainnav li > a[href]').each(function(){
 			var link = new URL($(this).attr('href'))
 			if(link.pathname == path && match == false){
 				match = true
@@ -245,7 +245,7 @@ $(function(){
 			}
 		})
 		if(match == false){
-			$('#mainnav li > a:not(.show-for-sr)').each(function(){
+			$('#mainnav li > a[href]').each(function(){
 				var link = new URL($(this).attr('href'))
 				if(~path.indexOf(link.pathname)){
 					$(this).parent().addClass('current-menu-item').parents('li').addClass('current-menu-ancestor')
