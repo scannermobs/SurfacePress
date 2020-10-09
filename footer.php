@@ -65,7 +65,7 @@
 												<div class="switch large">
 													<input class="switch-input" id="access-contrast-standard" type="radio" name="accessContrast" value="standard" checked>
 													<label class="switch-paddle" for="access-contrast-standard">
-														<span class="show-for-sr">Contrast toggle</span>
+														<span class="show-for-sr">Standard contrast toggle</span>
 														<span class="switch-active" aria-hidden="true">On</span>
 														<span class="switch-inactive" aria-hidden="true">Off</span>
 													</label>
@@ -84,7 +84,7 @@
 												<div class="switch large">
 													<input class="switch-input" id="access-contrast-low" type="radio" name="accessContrast" value="low">
 													<label class="switch-paddle" for="access-contrast-low">
-														<span class="show-for-sr">Contrast toggle</span>
+														<span class="show-for-sr">Low contrast toggle</span>
 														<span class="switch-active" aria-hidden="true">On</span>
 														<span class="switch-inactive" aria-hidden="true">Off</span>
 													</label>
@@ -103,7 +103,7 @@
 												<div class="switch large">
 													<input class="switch-input" id="access-contrast-high" type="radio" name="accessContrast" value="high">
 													<label class="switch-paddle" for="access-contrast-high">
-														<span class="show-for-sr">Contrast toggle</span>
+														<span class="show-for-sr">High contrast toggle</span>
 														<span class="switch-active" aria-hidden="true">On</span>
 														<span class="switch-inactive" aria-hidden="true">Off</span>
 													</label>
@@ -129,7 +129,7 @@
 												<div class="switch large">
 													<input class="switch-input" id="access-text-standard" type="radio" name="accessText" value="standard" checked>
 													<label class="switch-paddle" for="access-text-standard">
-														<span class="show-for-sr">Contrast toggle</span>
+														<span class="show-for-sr">Standard text toggle</span>
 														<span class="switch-active" aria-hidden="true">On</span>
 														<span class="switch-inactive" aria-hidden="true">Off</span>
 													</label>
@@ -148,7 +148,7 @@
 												<div class="switch large">
 													<input class="switch-input" id="access-text-large" type="radio" name="accessText" value="large">
 													<label class="switch-paddle" for="access-text-large">
-														<span class="show-for-sr">Contrast toggle</span>
+														<span class="show-for-sr">Large text toggle</span>
 														<span class="switch-active" aria-hidden="true">On</span>
 														<span class="switch-inactive" aria-hidden="true">Off</span>
 													</label>
@@ -167,7 +167,7 @@
 												<div class="switch large">
 													<input class="switch-input" id="access-text-xl" type="radio" name="accessText" value="xl">
 													<label class="switch-paddle" for="access-text-xl">
-														<span class="show-for-sr">Contrast toggle</span>
+														<span class="show-for-sr">Extra large text toggle</span>
 														<span class="switch-active" aria-hidden="true">On</span>
 														<span class="switch-inactive" aria-hidden="true">Off</span>
 													</label>
