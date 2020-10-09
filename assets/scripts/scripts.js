@@ -123,7 +123,6 @@ $(function(){
 	}
 
 	// Contrast function
-	$('#contrast input').removeAttr('checked')
 	$('#contrast').find($('[value="' + Cookies.get('contrast') + '"]')).attr('checked', 'checked')
 
 	$('#contrast input').click(function(){
@@ -133,7 +132,6 @@ $(function(){
 	})
 
 	// Text function
-	$('#text input').removeAttr('checked')
 	$('#text').find($('[value="' + Cookies.get('text') + '"]')).attr('checked', 'checked')
 
 	$('#text input').click(function(){
