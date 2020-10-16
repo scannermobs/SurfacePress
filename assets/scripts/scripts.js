@@ -298,6 +298,20 @@ $(function(){
 })
 
 //////////////////////////////////////////////////////////
+//      		Stop media on modal close
+
+$(function(){
+	const stopMedia = () => {
+		document.querySelectorAll('iframe').forEach(v => { v.src = v.src })
+		document.querySelectorAll('video').forEach(v => { v.pause() })
+		document.querySelectorAll('audio').forEach(v => { v.pause() })
+	}
+	$('.reveal').on('closed.zf.reveal', function(){
+		stopMedia()
+	})
+})
+
+//////////////////////////////////////////////////////////
 //      		Template to copy and edit
 
 $(function(){
