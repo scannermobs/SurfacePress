@@ -38,7 +38,7 @@ $breakpoint = "medium"; ?>
 
 		<div class="cell small-6 show-for-<?php echo $breakpoint ?>">
 
-			<ul id="main-branding" class="menu">
+			<ul id="main-branding" class="menu" role="navigation">
 
 				<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
 
