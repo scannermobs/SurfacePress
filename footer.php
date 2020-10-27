@@ -59,7 +59,7 @@
 										<p>Standard contrast</p>
 										<div class="grid-x grid-margin-x align-middle">
 											<div class="cell auto">
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="Standard text contrast">
 											</div>
 											<div class="cell auto">
 												<div class="switch large">
@@ -78,7 +78,7 @@
 										<p>Low contrast</p>
 										<div class="grid-x grid-margin-x align-middle">
 											<div class="cell auto">
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-low.png" alt="">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-low.png" alt="Low text contrast">
 											</div>
 											<div class="cell auto">
 												<div class="switch large">
@@ -97,7 +97,7 @@
 										<p>High contrast</p>
 										<div class="grid-x grid-margin-x align-middle">
 											<div class="cell auto">
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-high.png" alt="">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-contrast-high.png" alt="High text contrast">
 											</div>
 											<div class="cell auto">
 												<div class="switch large">
@@ -123,7 +123,7 @@
 										<p>Standard text</p>
 										<div class="grid-x grid-margin-x align-middle">
 											<div class="cell auto">
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-standard.png" alt="Standard text size">
 											</div>
 											<div class="cell auto">
 												<div class="switch large">
@@ -142,7 +142,7 @@
 										<p>Large text</p>
 										<div class="grid-x grid-margin-x align-middle">
 											<div class="cell auto">
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-large.png" alt="">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-large.png" alt="Large text size">
 											</div>
 											<div class="cell auto">
 												<div class="switch large">
@@ -161,7 +161,7 @@
 										<p>Extra large text</p>
 										<div class="grid-x grid-margin-x align-middle">
 											<div class="cell auto">
-												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-xl.png" alt="">
+												<img src="<?php echo get_template_directory_uri(); ?>/assets/images/access-text-xl.png" alt="Extra large text size">
 											</div>
 											<div class="cell auto">
 												<div class="switch large">
