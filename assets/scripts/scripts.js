@@ -201,9 +201,9 @@ $(function(){
 				} else {
 					$('#mainnav').css('padding-bottom', 1)
 				}
-				if(li.is('.active, .current-menu-ancestor, .current-page-ancestor')){
+				//if(li.is('.active, .current-menu-ancestor, .current-page-ancestor')){
 					li.toggleClass('show')
-				}
+				//}
 			}
 			$('#mainnav > li > ul').addClass('show-for-sr')
 			$('<span class="menu-toggle">').insertBefore('#mainnav > li > ul')
