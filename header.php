@@ -22,20 +22,25 @@
 		<meta class="foundation-mq" name="foundation-mq" content="">
 
 		<!-- Open Graph - edit as needed -->
+		<!-- Open Graph - edit as needed -->
 		<?php if(is_front_page()): ?>
-			<meta property="og:title" content="<?php echo get_bloginfo('name'); ?>" />
+		<meta property="og:title" content="<?php echo get_bloginfo('name'); ?>" />
+		<?php elseif( is_archive() ): ?>
+		<meta property="og:title" content="<?php echo strip_tags(get_the_archive_title()); ?>" />
 		<?php else: ?>
-			<meta property="og:title" content="<?php echo get_the_title(); ?>" />
+		<meta property="og:title" content="<?php echo get_the_title(); ?>" />
 		<?php endif; ?>
 		<meta property="og:type" content="website" />
 		<?php if(has_post_thumbnail()): ?>
-			<meta property="og:image" content="<?php echo get_the_post_thumbnail_url($post->ID, 'medium'); ?>" />
+		<meta property="og:image" content="<?php echo get_the_post_thumbnail_url($post->ID, 'medium'); ?>" />
 		<?php endif; ?>
 		<meta property="og:url" content="<?php echo get_the_permalink(); ?>" />
-		<?php if(!is_front_page() && $post->post_content): ?>
-			<meta property="og:description" content="<?php echo wp_trim_words(strip_shortcodes($post->post_content), 40, '...'); ?>" />
+		<?php if(!is_front_page() && is_archive() && get_the_archive_description()): ?>
+		<meta property="og:description" content="<?php echo wp_trim_words(strip_shortcodes(get_the_archive_description()), 40, '...'); ?>" />
+		<?php elseif(!is_front_page() && $post->post_content): ?>
+		<meta property="og:description" content="<?php echo wp_trim_words(strip_shortcodes($post->post_content), 40, '...'); ?>" />
 		<?php else: ?>
-			<meta property="og:description" content="<?php echo get_bloginfo('description'); ?>" />
+		<meta property="og:description" content="<?php echo get_bloginfo('description'); ?>" />
 		<?php endif; ?>
 		<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
 		<meta name="twitter:card" content="summary" />
