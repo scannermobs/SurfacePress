@@ -432,9 +432,6 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	#mainnav a{
 		padding: 0.7em 1.2em;
 	}
-	#header{
-		background-color: #eee;
-	}
 	.entry-content .alignright, .entry-content img.alignright{
 		margin-left: 0;
 	}
@@ -444,7 +441,6 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	#mainnav{
 		display: block;
 		text-align: center;
-		background-color: #fff;
 		padding: 1em;
 		margin: 0 -1.3rem 5rem;
 	}
