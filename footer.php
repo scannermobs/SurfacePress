@@ -8,23 +8,25 @@
  */
  ?>
 
-				<footer class="footer grid-container" role="contentinfo">
+					<footer class="footer grid-container" role="contentinfo">
 
-					<div class="inner-footer grid-x grid-margin-x grid-padding-x">
+						<div class="inner-footer grid-x grid-margin-x grid-padding-x">
 
-						<div class="small-12 medium-12 large-12 cell">
-							<nav role="navigation">
-								<?php joints_footer_links(); ?>
-							</nav>
-						</div>
+							<div class="small-12 medium-12 large-12 cell">
+								<nav role="navigation">
+									<?php joints_footer_links(); ?>
+								</nav>
+							</div>
 
-						<div class="small-12 medium-12 large-12 cell">
-							<p class="source-org copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Made by <a href="https://surfaceimpression.digital">Surface Impression</a>.</small></p>
-						</div>
+							<div class="small-12 medium-12 large-12 cell">
+								<p class="source-org copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Made by <a href="https://surfaceimpression.digital">Surface Impression</a>.</small></p>
+							</div>
 
-					</div> <!-- end #inner-footer -->
+						</div> <!-- end #inner-footer -->
 
-				</footer> <!-- end .footer -->
+					</footer> <!-- end .footer -->
+
+				</div> <!-- end .nav-dismiss -->
 
 			</div>  <!-- end .off-canvas-content -->
 

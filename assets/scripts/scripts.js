@@ -6,9 +6,21 @@ and Foundation play nice together.
 jQuery(document).ready(function(){// Remove empty P tags created by WP inside of Accordion and Orbit
 jQuery('.accordion p:empty, .orbit p:empty').remove()// Adds Flex Video to YouTube and Vimeo Embeds
 jQuery('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').each(function(){if(jQuery(this).innerWidth()/jQuery(this).innerHeight()>1.5){jQuery(this).wrap("<div class='widescreen responsive-embed'/>")}else{jQuery(this).wrap("<div class='responsive-embed'/>")}})})
-jQuery('main table').wrap('<div class="table-scroll" />')
+jQuery('main table:not(.variations)').wrap('<div class="table-scroll" />')
 
 $=jQuery
+
+//////////////////////////////////////////////////////////
+//      					isAfter function
+
+$(function(){
+	$.fn.isBefore= function(sel){
+		return this.nextAll().filter(sel).length !== 0
+	}
+	$.fn.isAfter = function(sel){
+		return this.prevAll().filter(sel).length !== 0
+	}
+})
 
 //////////////////////////////////////////////////////////
 //      		State for mobile menu button
@@ -16,6 +28,7 @@ $=jQuery
 $(function(){
 	$('#mobile-menu-button').click(function(){
 		$(this).children().toggleClass('hide')
+		$(this).children().removeClass('show-for-sr')
 	})
 })
 
@@ -38,6 +51,7 @@ $(function(){
 	}
 	function setupGal(){
 		$('.lightbox-link').removeClass('lightbox-link')
+		$('.woo-product .woocommerce-product-gallery__image').addClass('wp-block-image')
 		if($('.wp-block-gallery a, .wp-block-image a').length){
 			var modal = '<div class="reveal full" id="gallery-modal" data-reveal> \
 										<figure></figure>\
@@ -164,7 +178,7 @@ $(function(){
 					$(this).addClass('show-for-sr')
 				}
 			})
-			$('<span class="show-more-wrap"><span class="show-more" data-toggle>Show more</span></span>').insertAfter($(this))
+			$('<span class="show-more-wrap"><span class="show-more" data-toggle>Show more &nbsp;&nbsp;<i class="fas fa-chevron-down"></i></span></span>').insertAfter($(this))
 			$(this).next('.show-more-wrap').children('.show-more').click(function(e){
 				e.preventDefault()
 				$(this).parents().nextAll().removeClass('show-for-sr')
@@ -206,9 +220,17 @@ $(function(){
 				//}
 			}
 			$('#mainnav > li > ul').addClass('show-for-sr')
-			$('<span class="menu-toggle">').insertBefore('#mainnav > li > ul')
+			$('<span class="menu-toggle"><i class="fas fa-chevron-down"></i></span>').insertBefore('#mainnav > li > ul')
 			$('#mainnav > li .menu-toggle').click(function(){
 				menuShow($(this))
+			})
+			$('.nav-dismiss').click(function(){
+				if($('#mainnav li.show').length){
+					menuShow($('#mainnav .show'))
+					$('#mainnav .show').removeClass('show')
+					navTransition()
+					event.stopPropagation()
+				}
 			})
 			// For tabbing through links
 			// Would be nice to make this work properly when you shift+tab (go backwards)
@@ -246,6 +268,9 @@ $(function(){
 		var match = false
 		var path = window.location.pathname
 		$('#mainnav li > a[href]').each(function(){
+			if(!$(this).attr('href').startsWith('h')){
+				$(this).attr('href', window.location.origin+$(this).attr('href'))
+			}
 			var link = new URL($(this).attr('href'))
 			if(link.pathname == path && match == false){
 				match = true

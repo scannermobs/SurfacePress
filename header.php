@@ -22,7 +22,6 @@
 		<meta class="foundation-mq" name="foundation-mq" content="">
 
 		<!-- Open Graph - edit as needed -->
-		<!-- Open Graph - edit as needed -->
 		<?php if(is_front_page()): ?>
 		<meta property="og:title" content="<?php echo get_bloginfo('name'); ?>" />
 		<?php elseif( is_archive() ): ?>
@@ -47,7 +46,6 @@
 		<!-- <meta name="twitter:site" content="@example" /> -->
 		<!-- <meta name="twitter:creator" content="@msexample" /> -->
 		<!-- <meta property="fb:admins" content="USER_ID"/> -->
-
 
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
@@ -106,3 +104,5 @@
 					 <?php get_template_part( 'parts/nav', 'default' ); ?>
 
 				</header> <!-- end .header -->
+
+				<div class="nav-dismiss">
