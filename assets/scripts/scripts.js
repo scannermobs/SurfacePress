@@ -228,7 +228,6 @@ $(function(){
 				if($('#mainnav li.show').length){
 					menuShow($('#mainnav .show'))
 					$('#mainnav .show').removeClass('show')
-					navTransition()
 					event.stopPropagation()
 				}
 			})
