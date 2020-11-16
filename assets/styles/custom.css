@@ -204,7 +204,7 @@ pre > code{
 	margin: 0;
 }
 #mobile-branding a{
-	color: #222;
+	color: inherit;
 	display: block;
 }
 #main-branding{
@@ -227,7 +227,7 @@ pre > code{
 	justify-content: space-between;
 	padding: 1rem 1.22rem;
 	background-color: inherit;
-	color: #222;
+	color: inherit;
 	font-weight: 700;
 }
 .title-bar .menu-icon::after{
@@ -256,7 +256,7 @@ pre > code{
 	padding: 0 0 0 0.15em;
 	display: inline-block;
 }
-#mainnav li a,
+#header a,
 #mainnav .menu-toggle i{
 	color: inherit;
 }
