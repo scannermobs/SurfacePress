@@ -256,7 +256,8 @@ pre > code{
 	padding: 0 0 0 0.15em;
 	display: inline-block;
 }
-#mainnav li a{
+#mainnav li a,
+#mainnav .menu-toggle i{
 	color: inherit;
 }
 #mainnav .active > a,
