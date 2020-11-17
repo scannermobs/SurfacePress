@@ -195,7 +195,7 @@ $(function(){
 	function doMenu(){
 		$('#mainnav .menu-toggle').remove()
 		$('#mainnav').css('padding-bottom', 1)
-		if($(window).width() > 700){
+		if($(window).width() > 640){
 			function menuShow(elem){
 				var li = elem.parent()
 				$('#mainnav > li').not(li).removeClass('show')
