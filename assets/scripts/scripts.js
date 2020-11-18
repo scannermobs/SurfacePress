@@ -336,7 +336,7 @@ $(function(){
 })
 
 //////////////////////////////////////////////////////////
-//      		Template to copy and edit
+//      		General
 
 $(function(){
 
