@@ -229,6 +229,9 @@ $(function(){
 				event.stopPropagation()
 				menuShow($(this))
 			})
+			$('#mainnav li a').click(function(event){
+				event.stopPropagation()
+			})
 			$('.off-canvas-content').click(function(){
 				if($('#mainnav li.show').length){
 					menuShow($('#mainnav .show'))
