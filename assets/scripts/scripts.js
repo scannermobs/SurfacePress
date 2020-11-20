@@ -205,6 +205,10 @@ $(function(){
 				var w = $('#mainnav').innerWidth()
 				var ul = $(elem).siblings('ul')
 				$('#mainnav > li > ul').not(ul).addClass('show-for-sr')
+				$(elem).siblings('ul').css({
+					'left': 0,
+					'width': 0
+				})
 				$(elem).siblings('ul').toggleClass('show-for-sr').css({
 					'left': '-'+x+'px',
 					'width': w
@@ -221,14 +225,14 @@ $(function(){
 			}
 			$('#mainnav > li > ul').addClass('show-for-sr')
 			$('<span class="menu-toggle"><i class="fas fa-chevron-down"></i></span>').insertBefore('#mainnav > li > ul')
-			$('#mainnav > li .menu-toggle').click(function(){
+			$('#mainnav > li .menu-toggle').click(function(event){
+				event.stopPropagation()
 				menuShow($(this))
 			})
-			$('.nav-dismiss').click(function(){
+			$('.off-canvas-content').click(function(){
 				if($('#mainnav li.show').length){
 					menuShow($('#mainnav .show'))
 					$('#mainnav .show').removeClass('show')
-					event.stopPropagation()
 				}
 			})
 			// For tabbing through links

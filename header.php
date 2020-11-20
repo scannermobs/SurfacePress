@@ -104,5 +104,3 @@
 					 <?php get_template_part( 'parts/nav', 'default' ); ?>
 
 				</header> <!-- end .header -->
-
-				<div class="nav-dismiss">
