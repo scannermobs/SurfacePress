@@ -260,20 +260,15 @@ pre > code{
 #mainnav .menu-toggle i{
 	color: inherit;
 }
-#mainnav .active > a,
-#mainnav .current-menu-item > a,
-#mainnav .current-menu-ancestor > a,
-#mainnav .current-page-ancestor > a{
-	background-color: transparent;
-	text-decoration: underline;
-}
 span.deleteicon{
 	position: relative;
 	display: block;
 }
-#mainnav .active > a, #footer-links .active > a,
+#mainnav .active > a,
+#mainnav .current-menu-item > a,
 #mainnav .current-menu-ancestor > a,
-#mainnav .current-page-ancestor > a{
+#mainnav .current-page-ancestor > a,
+#footer-links .active > a{
 	background-color: inherit;
 	text-decoration: underline;
 }
@@ -636,7 +631,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 
 /*
 ██╗  ██╗██╗
-╚██╗██╔╝██║	
+╚██╗██╔╝██║
  ╚███╔╝ ██║
  ██╔██╗ ██║
 ██╔╝ ██╗███████╗
