@@ -263,6 +263,7 @@ pre > code{
 span.deleteicon{
 	position: relative;
 	display: block;
+	flex-grow: 1;
 }
 #mainnav .active > a,
 #mainnav .current-menu-item > a,
