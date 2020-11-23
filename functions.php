@@ -101,19 +101,15 @@ add_filter( 'get_the_archive_title', 'hide_the_archive_title_prefix' );
 // Meta description
 function custom_meta_description() {
 	global $post;
-	if ( is_singular() ) {
+	if ( is_singular() && !is_front_page() ) {
 		$desc_post = strip_tags( $post->post_content );
 		$desc_post = wp_strip_all_tags( $desc_post, true );
-		$desc_post = str_replace( array("\n", "\r", "\t"), ' ', $desc_post );
+		$desc_post = trim(html_entity_decode($desc_post), " \t\n\r\0\x0B\xC2\xA0");
 		$desc_post = mb_substr( $desc_post, 0, 160, 'utf8' );
 		echo '<meta name="description" content="' . $desc_post . '" />' . "\n";
 	}
-	if ( is_home() ) {
-		echo '<meta name="description" content="' . get_bloginfo( "description" ) . '" />' . "\n";
-	}
-	if ( is_category() ) {
-		$desc_cat = strip_tags(category_description());
-		echo '<meta name="description" content="' . $desc_cat . '" />' . "\n";
+	else{
+		echo '<meta name="description" content="' . html_entity_decode(get_bloginfo( "description" ), ENT_QUOTES | ENT_HTML5, 'UTF-8') . '" />' . "\n";
 	}
 }
 add_action( 'wp_head', 'custom_meta_description');
