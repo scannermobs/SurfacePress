@@ -26,7 +26,7 @@ function joints_top_nav() {
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'mainnav',					// Adding custom nav id
 		'menu_class'		=> 'menu',	// Adding custom nav class
-		'items_wrap'		=> '<ul id="%1$s" class="%2$s">%3$s</ul>',
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)

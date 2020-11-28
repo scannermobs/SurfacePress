@@ -14,7 +14,7 @@
 
 				<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 
-				<?php get_template_part( 'parts/content', 'byline' ); ?>
+				<?php //get_template_part( 'parts/content', 'byline' ); ?>
 
 			</div>
 
@@ -28,7 +28,7 @@
 
 			<div class="small-12 medium-12 large-12 cell">
 
-				<?php the_post_thumbnail('full'); ?>
+				<?php the_post_thumbnail('large'); ?>
 
 				<?php the_content(); ?>
 

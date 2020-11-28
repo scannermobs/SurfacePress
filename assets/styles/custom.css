@@ -2,7 +2,7 @@
 /* Please use Foundation's visibility classes
 [ .show-for-sr, .hide (not .hidden) etc], rather than making your own */
 body{
-	color: #111;
+	color: #222;
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.8rem;
 	line-height: 1.5;
@@ -13,37 +13,44 @@ p{
 }
 a{
 	transition: opacity 0.2s ease;
-	color: #111;
-}
-a, a:hover{
 	color: inherit;
 }
-a:focus{
+a:hover, a:focus{
 	color: inherit;
-	outline: none;
-	opacity: 0.7;
-}
-button{
-	cursor: pointer;
-	transition: opacity 0.2s ease;
-}
-button:hover{
-	opacity: 0.8;
+	outline: inherit;
+	opacity: 0.85;
 }
 p a,
 main li a{
-	color: #1a7bb5;
+	color: #0c679d;
+	text-decoration: underline;
 }
 p a:hover,
 main li a:hover{
-	text-decoration: underline;
+	opacity: 1;
+	text-decoration: none;
 }
-.button{
-	background-color: #444;
+button,
+.button,
+.wp-block-button__link{
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+}
+.button,
+.wp-block-button__link{
+	background-color: #222;
 	color: #fff;
 }
-.button:focus, .button:hover{
-	background-color: #1a7bb5;
+button:hover, button:focus,
+.button:hover, .button:focus,
+.wp-block-button__link:hover, .wp-block-button__link:focus{
+	opacity: 0.85;
+}
+.button:hover, .button:focus,
+.wp-block-button__link:hover, .wp-block-button__link:focus{
+	color: inherit;
+	outline: none;
+	background-color: #222;
 	color: #fff;
 }
 h1, h2, h3, h4, h5, h6,
@@ -60,6 +67,11 @@ main{
 }
 .clear{
 	clear: both;
+}
+.clearfix::after {
+	content: '';
+	clear: both;
+	display: table;
 }
 [data-toggle]{
 	cursor: pointer;
@@ -86,33 +98,25 @@ h6, .h6{
 }
 
 /* Base settings for content area, edit as needed */
-main p:not(:first-child),
-main h1:not(:first-child),
-main h2:not(:first-child),
-main h3:not(:first-child),
-main h4:not(:first-child),
-main h5:not(:first-child),
-main h6:not(:first-child),
-main pre:not(:first-child),
-main hr:not(:first-child){
-	margin-top: 2em;
-	margin-bottom: 2em;
-}
-main figure{
-	margin-top: 4em;
-	margin-bottom: 4em;
-}
-main li{
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
+main p,
 main h1,
 main h2,
 main h3,
 main h4,
 main h5,
-main h6{
-	clear: both;
+main h6,
+main pre,
+main hr{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+main figure{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+main li{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 main ul, main ol, main dl{
 	margin: 2em 0 2em 2em;
@@ -134,7 +138,7 @@ main ul, main ol, main dl{
 	font-size: 1.6em;
 }
 blockquote, blockquote p{
-	color: #757575;
+	color: #666;
 }
 blockquote{
 	margin: 2em 0;
@@ -143,7 +147,7 @@ blockquote{
 	overflow: auto;
 }
 ::placeholder{
-	color: #757575;
+	color: #666;
 }
 pre > code{
 	padding: 0;
@@ -164,7 +168,10 @@ pre > code{
 	display: table;
 	margin-top: 2em;
 }
-main figure.wp-block-image > img{
+.wp-block-image img,
+.wp-block-image a,
+.blocks-gallery-grid .blocks-gallery-item img,
+.blocks-gallery-item a{
 	width: 100%;
 }
 
@@ -189,6 +196,7 @@ main figure.wp-block-image > img{
 	line-height: 1;
 	padding: 0.5em 0.8em;
 	border: 1px solid rgba(0,0,0,0.1);
+	font-weight: 600;
 }
 #main-branding,
 #mobile-branding{
@@ -196,7 +204,7 @@ main figure.wp-block-image > img{
 	margin: 0;
 }
 #mobile-branding a{
-	color: #000;
+	color: inherit;
 	display: block;
 }
 #main-branding{
@@ -219,11 +227,11 @@ main figure.wp-block-image > img{
 	justify-content: space-between;
 	padding: 1rem 1.22rem;
 	background-color: inherit;
-	color: #111;
+	color: inherit;
 	font-weight: 700;
 }
 .title-bar .menu-icon::after{
-	background-color: #111;
+	background-color: #222;
 }
 .table-scroll{
 	font-size: 80%;
@@ -236,8 +244,7 @@ main figure.wp-block-image > img{
 }
 #mainnav{
 	margin: 0;
-	color: #111;
-	overflow: hidden;
+	color: #222;
 }
 #mainnav li{
 	display: block;
@@ -247,26 +254,23 @@ main figure.wp-block-image > img{
 #mainnav li a, #footer-links a{
 	font-weight: 600;
 	padding: 0 0 0 0.15em;
-	color: #111;
 	display: inline-block;
 }
-#mainnav .active > a,
-#mainnav .current-menu-item > a,
-#mainnav .current-menu-ancestor > a,
-#mainnav .current-page-ancestor > a{
-	background-color: transparent;
-	text-decoration: underline;
+#header a,
+#mainnav .menu-toggle i{
 	color: inherit;
 }
 span.deleteicon{
 	position: relative;
 	display: block;
+	flex-grow: 1;
 }
-#mainnav .active > a, #footer-links .active > a,
+#mainnav .active > a,
+#mainnav .current-menu-item > a,
 #mainnav .current-menu-ancestor > a,
-#mainnav .current-page-ancestor > a{
+#mainnav .current-page-ancestor > a,
+#footer-links .active > a{
 	background-color: inherit;
-	color: inherit;
 	text-decoration: underline;
 }
 #mainnav .current-menu-ancestor.show > a,
@@ -298,6 +302,12 @@ span.deleteicon span{
 .wp-block-gallery figcaption{
 	pointer-events: none;
 }
+.lightbox-link{
+	transition: opacity 0.2s ease;
+}
+.lightbox-link:hover, .lightbox-link:focus{
+	opacity: 0.85;
+}
 #modal-accessibility .close-button span{
 	vertical-align: middle;
 }
@@ -306,7 +316,7 @@ span.deleteicon span{
 	font-size: 0.5em;
 }
 #modal-accessibility a{
-	color: #111;
+	color: #222;
 }
 #modal-accessibility .tabs-title > a{
 	font-size: 1em;
@@ -354,7 +364,7 @@ body.admin-bar .reveal.full{
 	top: 2em;
 }
 #header{
-	background-color: #e4e4e4;
+	background-color: #eee;
 }
 .entry-content .show-more-wrap{
 	text-align: center;
@@ -363,37 +373,45 @@ body.admin-bar .reveal.full{
 .entry-content .show-more{
 	display: inline-block;
 }
-.entry-content .show-more::after{
-	content: '';
-	display: block;
-	width: 1rem;
-	height: 1rem;
-	margin: 0 auto;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: contain;
-}
 h1.page-title,
 h1.entry-title{
 	font-weight: 600;
 	margin: 2em 0;
 	text-align: center;
 }
-.listing .text p{
-	margin: 0 0 1em;
-}
-.listing figure{
+.listing-item p.title{
 	margin: 0;
 }
-.listing article{
-	margin-bottom: 2em;
+.listing-item figure{
+	margin: 0;
 }
-.listing article a{
-	padding: 2em 1em;
-	background-color: #e4e4e4;
+.listing-item{
+	margin-bottom: 1.8rem;
 }
-.listing article a > :last-child{
-	margin-bottom: 0;
+.listing-item .entry-content p{
+	margin: 1em 0;
+}
+.listing-item .button{
+	margin-top: 1em;
+}
+.listing-item .button:hover{
+	background-color: #222;
+}
+.listing-item a{
+	padding: 1em 0.7em;
+	background-color: #eee;
+}
+.grid-item  a{
+	display: block;
+	padding: 1em;
+}
+.woocommerce ul#shipping_method li input{
+	vertical-align: unset;
+}
+.single-product .product_meta a{
+	padding: 0.5em 0.8em;
+	background-color: rgba(0,0,0,0.1);
+	margin: 0 1em 1em 0;
 }
 
 /*
@@ -406,12 +424,9 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 ██║     ██║  ██║╚██████╔╝██║ ╚████║███████╗    ╚██████╔╝██║ ╚████║███████╗██║
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝     ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝
 */
-@media all and (max-width: 40em){
+@media screen and (max-width: 40em){
 	#mainnav a{
 		padding: 0.7em 1.2em;
-	}
-	#header{
-		background-color: #eee;
 	}
 	.entry-content .alignright, .entry-content img.alignright{
 		margin-left: 0;
@@ -422,7 +437,6 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	#mainnav{
 		display: block;
 		text-align: center;
-		background-color: #fff;
 		padding: 1em;
 		margin: 0 -1.3rem 5rem;
 	}
@@ -458,7 +472,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	}
 	#mainnav .current-menu-ancestor > a,
 	#mainnav .current-page-ancestor > a{
-		box-shadow: none;
+		text-decoration: none;
 	}
 	#utility-nav ul{
 		justify-content: flex-end;
@@ -476,6 +490,9 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 		pointer-events: none;
 		cursor: default;
 	}
+	.wp-block-image figure{
+		width: 100%;
+	}
 }
 
 /*
@@ -486,7 +503,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
    ██║   ██║  ██║██████╔╝███████╗███████╗   ██║       ╚██████╔╝██║ ╚████║███████╗██║
    ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝        ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝
 */
-@media all and (min-width: 40em) and (max-width: 64em){
+@media screen and (min-width: 40em) and (max-width: 64em){
 
 }
 /*
@@ -497,7 +514,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
    ██║   ██║  ██║██████╔╝███████╗███████╗   ██║       ╚██████╔╝██║
    ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝   ╚═╝        ╚═════╝ ╚═╝
 */
-@media all and (min-width: 40em){
+@media screen and (min-width: 40em){
 	body{
 		font-size: 1rem;
 	}
@@ -511,14 +528,28 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	main .alignleft{
 		max-width: 40%;
 	}
+	main figure{
+		margin-top: 4em;
+		margin-bottom: 4em;
+	}
 	#gallery-modal figure img{
 		max-width: 80%;
 	}
 	#mainnav{
 		margin: 1rem 0;
 		display: flex;
-		justify-content: space-between;
 		transition: padding 0.2s linear;
+		/* justify-content: space-between; */
+		/* Enable ^this if you'd like the nav stretched to fit */
+	}
+	#mainnav li{
+		display: block;
+		list-style: none;
+		margin-bottom: 0.5em;
+		margin-right: 2em;
+	}
+	#mainnav li:last-child{
+		margin-right: 0;
 	}
 	#mainnav li a, #footer-links li a{
 		font-size: 0.8em;
@@ -537,13 +568,12 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	#mainnav li ul:not(.show-for-sr){
 		position: absolute;
 	}
-	#mainnav li{
+	#mainnav > li{
 		position: relative;
 		left: -0.15em;
 	}
 	#mainnav li ul li{
 		display: inline-block;
-		margin-right: 2.5em;
 	}
 	#mainnav li ul li:last-child{
 		margin-right: 0;
@@ -555,21 +585,19 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	}
 	.menu-toggle{
 		cursor: pointer;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center center;
-		width: 1.1em;
-		height: 1.1em;
 		display: inline-block;
-		vertical-align: sub;
+		vertical-align: middle;
 		margin-left: 0.4em;
 		transition: transform 0.2s ease;
 	}
 	.menu-toggle.show{
-		transform: rotate(180deg);
+		transform: rotate(-180deg);
 	}
 	body.admin-bar .reveal.full{
 		top: 46px !important;
+	}
+	#grid[data-columns]::before {
+		content: '3 .column.size-1of3';
 	}
 }
 
@@ -581,7 +609,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 ██████╔╝███████╗███████║██║  ██╗   ██║   ╚██████╔╝██║
 ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝
 */
-@media all and (min-width: 64em){
+@media screen and (min-width: 64em){
 	body{
 		font-size: 1.2rem;
 	}
@@ -602,6 +630,17 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 	}
 }
 
+/*
+██╗  ██╗██╗
+╚██╗██╔╝██║
+ ╚███╔╝ ██║
+ ██╔██╗ ██║
+██╔╝ ██╗███████╗
+╚═╝  ╚═╝╚══════╝
+*/
+@media screen and (min-width: 80em){
+
+}
 
 /*
  █████╗  ██████╗ ██████╗███████╗███████╗███████╗     ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗███████╗███████╗
@@ -628,10 +667,15 @@ body[data-cookie-contrast=high] main h4,
 body[data-cookie-contrast=high] main h5,
 body[data-cookie-contrast=high] main h6,
 body[data-cookie-contrast=high] main p,
-body[data-cookie-contrast=high] main a:not(.button),
+body[data-cookie-contrast=high] main a:not(.button):not(.wp-block-file__button),
 body[data-cookie-contrast=high] main li{
 	color: #000;
 }
+body[data-cookie-contrast=high]p a,
+body[data-cookie-contrast=high]main li a{
+	text-decoration: underline;
+}
+/*_______________ Large Text ____________*/
 body[data-cookie-text=large] main.main{
 	font-size: 120%;
 }
@@ -651,8 +695,4 @@ body[data-cookie-text=xl] main.main{
 */
 span.deleteicon span{
 	background-image: url(data:image/png;base64,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);
-}
-.menu-toggle,
-.entry-content .show-more::after{
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABmJLR0QA/wD/AP+gvaeTAAAA4klEQVRoge3VQQqDMBSE4TlTu0iP5jLLXrbFG7SbDIjUmpj39Cnzgztx+AwooJRSSimllFJuDQDSDjupbLmWAXwAjAAejjt3AO+y9fQayWWAlxdqiuFljsqzAS/UL4w5Ki8MWKP+YcxQw8rAFNXzoUjlGTVbXR+KG4BX5dDWk6o5GasXB8AXtTuGeaAOwzBL1OEYZoEKg2E9qHAYtgUVFsNa/h1j4727Y1jLSYXHMCtUCAzrRYXCsK2okBjWigqNYbWoU2DYGupUGLaEOiWGzVGnxjCiLoFhCRfCKKWUUkopn74gUGgVbgiddAAAAABJRU5ErkJggg==);
 }

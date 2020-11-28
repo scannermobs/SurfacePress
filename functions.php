@@ -91,3 +91,25 @@ function hide_the_archive_title_prefix( $title ) {
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'hide_the_archive_title_prefix' );
+
+// Woo support
+// function mytheme_add_woocommerce_support() {
+// 	add_theme_support( 'woocommerce' );
+// }
+// add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+// Meta description
+function custom_meta_description() {
+	global $post;
+	if ( is_singular() && !is_front_page() ) {
+		$desc_post = strip_tags( $post->post_content );
+		$desc_post = wp_strip_all_tags( $desc_post, true );
+		$desc_post = trim(html_entity_decode($desc_post), " \t\n\r\0\x0B\xC2\xA0");
+		$desc_post = mb_substr( $desc_post, 0, 160, 'utf8' );
+		echo '<meta name="description" content="' . $desc_post . '" />' . "\n";
+	}
+	else{
+		echo '<meta name="description" content="' . html_entity_decode(get_bloginfo( "description" ), ENT_QUOTES | ENT_HTML5, 'UTF-8') . '" />' . "\n";
+	}
+}
+add_action( 'wp_head', 'custom_meta_description');
