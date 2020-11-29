@@ -116,12 +116,20 @@ $(function(){
 	$(document).keydown(function (e){
 		if($('#gallery-modal').attr('aria-hidden') == 'false'){
 			if(e.which == 37){ // left arrow
-				doGal($('.blocks-gallery-grid img[src="'+$('#gallery-modal img').attr('src')+'"]').parentsUntil('.blocks-gallery-grid').prev().find('a'))
+				if(!$('#gallery-modal .prev').hasClass('hide')){
+					doGal($('.blocks-gallery-grid img[src="'+$('#gallery-modal img').attr('src')+'"]').parentsUntil('.blocks-gallery-grid').prev().find('a'))
+				}
 			}
 			else if(e.which == 39){    // right arrow
-				doGal($('.blocks-gallery-grid img[src="'+$('#gallery-modal img').attr('src')+'"]').parentsUntil('.blocks-gallery-grid').next().find('a'))
+				if(!$('#gallery-modal .next').hasClass('hide')){
+					doGal($('.blocks-gallery-grid img[src="'+$('#gallery-modal img').attr('src')+'"]').parentsUntil('.blocks-gallery-grid').next().find('a'))
+				}
 			}
 		}
+	})
+	$('#gallery-modal figure').click(function(event){
+		$('#gallery-modal').foundation('close')
+		event.stopPropagation()
 	})
 })
 
