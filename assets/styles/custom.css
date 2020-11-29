@@ -302,12 +302,6 @@ span.deleteicon span{
 .wp-block-gallery figcaption{
 	pointer-events: none;
 }
-.lightbox-link{
-	transition: opacity 0.2s ease;
-}
-.lightbox-link:hover, .lightbox-link:focus{
-	opacity: 0.85;
-}
 #modal-accessibility .close-button span{
 	vertical-align: middle;
 }
@@ -320,6 +314,13 @@ span.deleteicon span{
 }
 #modal-accessibility .tabs-title > a{
 	font-size: 1em;
+}
+.lightbox-link{
+	transition: opacity 0.2s ease;
+	cursor: zoom-in;
+}
+.lightbox-link:hover, .lightbox-link:focus{
+	opacity: 0.85;
 }
 #gallery-modal{
 	background-color: rgba(0,0,0,0.85);
