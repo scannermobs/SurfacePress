@@ -32,7 +32,7 @@ $breakpoint = "medium"; ?>
 
 </div>
 
-<div id="top-bar-menu" class="grid-container" data-tpl="nav-header">
+<div id="top-bar-menu" class="grid-container" data-tpl="nav-default">
 
 	<div class="grid-x grid-margin-x grid-padding-x">
 
