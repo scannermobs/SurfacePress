@@ -520,7 +520,7 @@ To generate new titles use: http://patorjk.com/software/taag/#p=display&f=ANSI%2
 		font-size: 1rem;
 	}
 	#utility-nav ul{
-		justify-content: end;
+		justify-content: flex-end;
 	}
 	#utility-nav li{
 		margin: 0 0 0 1.5rem;
